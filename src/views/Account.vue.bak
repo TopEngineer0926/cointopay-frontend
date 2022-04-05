@@ -1,0 +1,219 @@
+<template>
+  <account-layout>
+    <!-- Sidebar -->
+    <template v-slot:sidebar>
+      <ul class="pl-0" style="list-style-type: none">
+        <li v-for="(nav, i) in navs" :key="i" class="mb-1 border border-gray-200 dark:border-gray-700">
+          <router-link :class="{'active': nav.isActive }"
+                       :to="{ name: 'account', params: {action: nav.key } }"
+                       class="flex items-center hover:bg-gray-200 dark:hover:bg-gray-700 p-2 cursor-pointer dark:text-gray-300"
+                       tag="a" @click="toggleActive(nav)">
+            <span>{{ translate(nav.name) }}</span>
+            <span class="ml-3" v-if="nav.key === 'kyc' && accountInfo">
+              <icon name="exclamation-circle" classes="w-5 h-5 text-yellow-400"
+                    v-if="accountInfo.Verified === '0'"></icon>
+              <icon name="refresh" classes="w-5 h-5 text-blue-500"
+                    v-if="accountInfo.FinalVerification === '0'"></icon>
+              <icon name="badge-check" classes="w-5 h-5 text-green-500"
+                    v-if="accountInfo.Verified === '1' && accountInfo.FinalVerification === '1'"></icon>
+            </span>
+          </router-link>
+        </li>
+      </ul>
+    </template>
+    <!-- Main content area -->
+    <template v-slot:content>
+      <div v-if="selectedNav">
+        <account-detail v-if="selectedNav.key === 'detail'"></account-detail>
+        <wallet-currencies v-if="selectedNav.key === 'wallet'"></wallet-currencies>
+        <payout-settings v-if="selectedNav.key === 'payout'"></payout-settings>
+        <kyc v-if="selectedNav.key === 'kyc'"></kyc>
+        <shopping-cart v-if="selectedNav.key === 'shopping'"></shopping-cart>
+        <payment-urls v-if="selectedNav.key === 'payments'"></payment-urls>
+        <billing v-if="selectedNav.key === 'billing'"></billing>
+        <pos-settings v-if="selectedNav.key === 'pos'"></pos-settings>
+        <referrals v-if="selectedNav.key === 'referrals'"></referrals>
+      </div>
+    </template>
+  </account-layout>
+  <!-- Login Modal -->
+  <login-modal></login-modal>
+</template>
+
+<script>
+import AccountLayout from '@/components/layouts/AccountLayout'
+import Icon from '@/components/Icon'
+import AccountDetail from '@/components/account/AccountDetail'
+import WalletCurrencies from '@/components/account/WalletCurrencies'
+import PayoutSettings from '@/components/account/PayoutSettings'
+import Kyc from '@/components/account/Kyc'
+import ShoppingCart from '@/components/account/ShoppingCart'
+import PaymentUrls from '@/components/account/PaymentUrls'
+import Billing from '@/components/account/Billing'
+import PosSettings from '@/components/account/PosSettings'
+import Referrals from '@/components/account/Referrals'
+import LoginModal from '@/components/auth/modals/LoginModal'
+import { computed, inject, onBeforeMount, reactive, toRefs } from 'vue'
+import { useStore } from 'vuex'
+import { useRoute, useRouter } from 'vue-router'
+import { FETCH_ACCOUNT_INFO, LOGOUT } from '../store/keys'
+
+export default {
+  name: 'Account',
+  components: {
+    AccountLayout,
+    Icon,
+    AccountDetail,
+    WalletCurrencies,
+    PayoutSettings,
+    Kyc,
+    ShoppingCart,
+    PaymentUrls,
+    Billing,
+    PosSettings,
+    Referrals,
+    LoginModal
+  },
+  setup () {
+    // Providers
+    const translate = inject('translate')
+    const swal = inject('swal')
+    const toast = inject('toast')
+    const emitter = inject('emitter')
+    // Store
+    const store = useStore()
+    // Route
+    const route = useRoute()
+    const router = useRouter()
+    // State
+    const state = reactive({
+      navs: [
+        {
+          name: 'account.menu.details',
+          key: 'detail',
+          isActive: true
+        },
+        {
+          name: 'account.menu.wallet',
+          key: 'wallet',
+          isActive: false
+        },
+        {
+          name: 'account.menu.payout',
+          key: 'payout',
+          isActive: false
+        },
+        {
+          name: 'account.menu.kyc',
+          key: 'kyc',
+          isActive: false
+        },
+        {
+          name: 'account.menu.shopping',
+          key: 'shopping',
+          isActive: false
+        },
+        {
+          name: 'account.menu.payments',
+          key: 'payments',
+          isActive: false
+        },
+        {
+          name: 'account.menu.billing',
+          key: 'billing',
+          isActive: false
+        },
+        //{
+        //  name: 'account.menu.pos',
+        //  key: 'pos',
+        //  isActive: false
+        //},
+        {
+          name: 'account.menu.referrals',
+          key: 'referrals',
+          isActive: false
+        }
+      ],
+      selectedNav: null
+    })
+    // Computed
+    const accountInfo = computed(() => store.state.accountInfo)
+    const user = computed(() => store.state.user)
+
+    // Methods
+    const toggleActive = (selectedNav) => {
+      state.selectedNav = {
+        ...selectedNav,
+        isActive: true
+      }
+      state.navs.forEach(nav => {
+        nav.isActive = nav.name === selectedNav.name
+      })
+    }
+
+    onBeforeMount(() => {
+      store.dispatch(FETCH_ACCOUNT_INFO).then((response) => {
+        const message = response.message.toLowerCase()
+        const messages = [
+          'session not available',
+          'action not permitted without correct session',
+          'no merchant session'
+        ]
+        if (response.status_code === 400 && messages.indexOf(message) !== -1) {
+          swal.fire({
+            title: translate('account.session_expired'),
+            text: translate('account.expiry_msg'),
+            icon: 'warning',
+            showCancelButton: true,
+            confirmButtonColor: '#d33',
+            confirmButtonText: 'Yes',
+            cancelButtonText: 'No',
+            focusCancel: true,
+            customClass: {
+              container: 'swal2-tailwind'
+            }
+          }).then(({ value }) => {
+            if (value && value === true) {
+              store.dispatch(LOGOUT, user.value.SessionID).then((response) => {
+                if (response.toLowerCase() === 'success') {
+                  toast.warning('Session expired, Please login again.')
+                  emitter.emit('loginModal', {})
+                }
+              }).catch((err) => console.log(err))
+            } else {
+              router.push('/wallet')
+            }
+          })
+        }
+      }).catch((err) => console.log(err))
+      const action = route.params.action
+      state.navs.forEach(nav => {
+        nav.isActive = nav.key === action
+        if (nav.isActive) {
+          state.selectedNav = nav
+        }
+      })
+      if (state.selectedNav === null) {
+        state.navs[0] = {
+          ...state.navs[0],
+          isActive: true
+        }
+        state.selectedNav = state.navs[0]
+      }
+    })
+
+    return {
+      translate,
+      ...toRefs(state),
+      accountInfo,
+      toggleActive
+    }
+  }
+}
+</script>
+
+<style scoped lang="scss">
+.active {
+  @apply bg-gray-200 dark:bg-gray-700;
+}
+</style>

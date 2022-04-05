@@ -1,0 +1,692 @@
+{
+  "menu": {
+    "news": "Новости",
+    "wallet": "Кошелек",
+    "account": "Счет",
+    "pos": "позиция",
+    "shop": "Магазин",
+    "cart": "телега",
+    "support": "Поддержка",
+    "about": "О",
+    "login_signup": " Войти/Зарегистрироваться",
+    "logout": " Выйти"
+  },
+  "dashboard": {
+    "title": "Панель управления кошельком",
+    "overview": "Обзор кошелька",
+    "total": " Общий баланс кошелька",
+    "metrics": "Ключевые метрики",
+    "waiting": "Ожидание",
+    "paid": "Оплачено",
+    "expired": "Истекший",
+    "webshop": "Обзор интернет-магазина",
+    "transactions_per_day": "Транзакций в день",
+    "revenue_per_day": "доход в день",
+    "transactions_per_coin": "Транзакций на валюту",
+    "transactions": "Транзакций",
+    "report_incoming": "Сообщить о поступлении",
+    "report_outgoing": "Сообщить о платеже",
+    "chart_market_title": "График рынка",
+    "actions": "Действия кошелька",
+    "send": "Отправить",
+    "send_description": "Это действие отправит вашу криптовалюту другому лицу. Вам необходимо знать адрес получателя и сумму, которую вам нужно отправить.",
+    "receive": "Получить",
+    "receive_description": "Получить криптовалюту на свой счет. Укажите адрес получателя для отправителя.",
+    "ltr": "Адрес",
+    "ltr_description": "LTR адреса остаются открытыми в течение одного года, вы можете получить на них несколько сумм, как только вы консолидируете полученные суммы, они будут доступны для других действий.",
+    "swap": "Обмен",
+    "swap_description": " Обмен с одной криптовалюты на другую. Обратите внимание, что не всем доступен обмен.",
+    "vtoken": "vToken",
+    "vtoken_description": "Создать vtokens как представление значения. Легко отправлять и получать.",
+    "buy": "Купить",
+    "buy_description": "Легко купить криптовалюту с помощью банковского перевода или оплаты через iDEAL",
+    "payout": "Выплата",
+    "payout_description": "Выплата в фиатной валюте такой, как евро",
+    "trade": "Торговля",
+    "trade_description": "Торгуйте со своим криптовалютным балансом на нашей внутренней бирже reflextrader.com.",
+    "help": "Действия панели",
+    "update_cart_status": "Обновить статус заказа",
+    "btn_update_cart_status": "Обновить состояние",
+    "warning_message": "Пожалуйста, заполните поля формы KYC / AML в вашей учетной записи [HERE]. Вы не можете получать и / или покупать крипто, пока ваша информация не будет проверена нашей командой соответствия. Спасибо за Ваше понимание."
+  },
+  "send": {
+    "title": "Отправить",
+    "amount": "Сумма",
+    "coin_address": "Адрес валюты",
+    "scan": "Сканирование",
+    "upload": "Загрузить",
+    "button": "Отправить",
+    "address_book": "Адресная книга",
+    "modals": {
+      "pin": {
+        "desc": "Digite o PIN [PIN] para confirmar o pagamento instantâneo TZERO. <br/> [AMOUNT] será enviado!"
+      }
+    }
+  },
+  "receive": {
+    "title": "Получить",
+    "button": "Получить",
+    "input_currency": "Валюта ввода",
+    "amount": "Сумма",
+    "output_currency": "Валюта вывода",
+    "reference": "Ваша ссылка",
+    "email": "Отправить в виде счета по почте",
+    "schedule": "Расписание как счет-фактура",
+    "schedule_dropdown": "Выбрать расписание"
+  },
+  "buy": {
+    "title": "Купить",
+    "button": "Купить",
+    "input_currency": "Валюта ввода",
+    "amount": "Сумма"
+  },
+  "ltr": {
+    "title": "LTR",
+    "load_long_term_addresses": "Загрузить долгосрочные адреса",
+    "create": "Создать",
+    "consolidate": "Консолидировать"
+  },
+  "swap": {
+    "title": "Обмен",
+    "swap_to": "Обмен в",
+    "button": "Обмен",
+    "amount": "Сумма"
+  },
+  "vtoken": {
+    "title": "vToken",
+    "button_create": "Создать vToken",
+    "button_claim": "Запросить vToken",
+    "amount": "Сумма",
+    "token": "Знак"
+  },
+  "payout": {
+    "title": "Выплата",
+    "amount": "Сумма ввода",
+    "button": "Выплата",
+    "address_book": "Адресная книга",
+    "remove": "Удалить",
+    "message": "ПО УМОЛЧАНИЮ: выплата по счету"
+  },
+  "home": {
+    "alert": "Системное сообщение",
+    "slogan": "Современные валютные платежи",
+    "sub_slogan": "Криптовалютный банкинг, торговля, интеграция интернет-магазинов и торговых точек",
+    "signup": "Зарегистрируйтесь сейчас",
+    "auth_message": "Здравствуйте [USERNAME], нажмите сюда, чтобы перейти в",
+    "your_dashboard": "ваша панель управления",
+    "transaction": {
+      "slogan": "Создать бесплатный аккаунт",
+      "email": "Электронная почта",
+      "password": "Пароль",
+      "input_currency": "Валюта ввода",
+      "amount": "Сумма",
+      "output_currency": "Валюта вывода",
+      "try_it_for_free": "Попробуйте бесплатно"
+    },
+    "plugins": {
+      "slogan": "Плагины для принятия платежей в криптовалютах для вашего интернет-магазина",
+      "learn_more": "Узнать больше",
+      "sliders": {
+        "magento": {
+          "description": "Получить Magento плагин на Github.com/Cointopay",
+          "image": "https://s3-eu-west-1.amazonaws.com/cointopay/pics/Magento.png",
+          "link": "https://github.com/Cointopay?q=magento"
+        },
+        "prestashop": {
+          "description": "Получить Prestashop плагин на Github.com/Cointopay",
+          "image": "https://s3-eu-west-1.amazonaws.com/cointopay/pics/prestashop.png",
+          "link": "https://github.com/Cointopay?q=presta"
+        },
+        "ecwid": {
+          "description": "Установить ECWID плагин из Ecwid приложений",
+          "image": "https://s3-eu-west-1.amazonaws.com/cointopay/pics/ecwid.png",
+          "link": "https://www.ecwid.com/apps/"
+        },
+        "woocommerce": {
+          "description": "Получить Woocommerce плагин на Github.com/Cointopay",
+          "image": "https://s3-eu-west-1.amazonaws.com/cointopay/pics/woocommerce.png",
+          "link": "https://github.com/Cointopay?q=wordpress"
+        },
+        "opencart": {
+          "description": "Получить Opencart плагин на Github.com/Cointopay",
+          "image": "https://s3-eu-west-1.amazonaws.com/cointopay/pics/opencart.png",
+          "link": "https://github.com/Cointopay?q=opencart"
+        },
+        "whmcs": {
+          "description": "Получить WHMCS плагин на Github.com/Cointopay",
+          "image": "https://s3-eu-west-1.amazonaws.com/cointopay/pics/whmcs.jpg",
+          "link": "https://github.com/Cointopay?q=whmcs"
+        },
+        "shopify": {
+          "description": "Посмотреть видео на Youtube о интеграции Shopify",
+          "image": "https://s3-eu-west-1.amazonaws.com/cointopay/pics/shopify.png",
+          "link": "https://www.youtube.com/watch?v=eM_dYQKCqlI"
+        },
+        "gambio": {
+          "description": "Загрузите плагин gambio на Github.com/Cointopay",
+          "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTsOnMS-KmfgGeRVZJNRkMwkAAiT949z4V87Q&usqp=CAU",
+          "link": "https://github.com/Cointopay/Gambio"
+        },
+        "box_billing": {
+          "description": "Получить плагин Boxbilling на выставление счетов на Github.com/Cointopay",
+          "image": "https://s3-eu-west-1.amazonaws.com/cointopay/pics/boxbilling.jpg",
+          "link": "https://github.com/Cointopay?q=box"
+        },
+        "tomatocart": {
+          "description": "Получить Tomatocart плагин на Github.com/Cointopay",
+          "image": "https://s3-eu-west-1.amazonaws.com/cointopay/pics/tomatocart.png",
+          "link": "https://github.com/Cointopay?q=tomato"
+        },
+        "odoo": {
+          "description": "Получить Odoo плагин на Github.com/Cointopay",
+          "image": "https://s3-eu-west-1.amazonaws.com/cointopay/pics/odoo.png",
+          "link": "https://github.com/Cointopay?q=odoo"
+        },
+        "wordpressecommerce": {
+          "description": "Получить Wordpress ecommerce плагин на Github.com/Cointopay",
+          "image": "https://s3-eu-west-1.amazonaws.com/cointopay/pics/wordpressecommerce.jpg",
+          "link": "https://github.com/Cointopay?q=wordpress"
+        },
+        "blesta": {
+          "description": "Получить Blesta плагин на Github.com/Cointopay",
+          "image": "https://s3-eu-west-1.amazonaws.com/cointopay/pics/blesta.png",
+          "link": "https://github.com/Cointopay?q=blesta"
+        },
+        "easydigitaldownloads": {
+          "description": "Получить WP Easy Digital Downloads плагин на Github.com/Cointopay",
+          "image": "https://s3-eu-west-1.amazonaws.com/cointopay/pics/easydigitaldownloads.png",
+          "link": "https://github.com/Cointopay?q=easy"
+        },
+        "ubercart": {
+          "description": "Получить Ubercart плагин на Github.com/Cointopay",
+          "image": "https://s3-eu-west-1.amazonaws.com/cointopay/pics/ubercart.png",
+          "link": "https://github.com/Cointopay?q=uber"
+        },
+        "cscart": {
+          "description": "Получить CS-Cart плагин на Github.com/Cointopay",
+          "image": "https://s3-eu-west-1.amazonaws.com/cointopay/pics/cscart.png",
+          "link": "https://github.com/Cointopay?q=cs-cart"
+        },
+        "joomlavirtuemart": {
+          "description": "Получить Joomla плагин на Github.com/Cointopay",
+          "image": "https://s3-eu-west-1.amazonaws.com/cointopay/pics/joomla.png",
+          "link": "https://github.com/Cointopay?q=joomla"
+        },
+        "zencart": {
+          "description": "Получить Zencart плагин на Github.com/Cointopay",
+          "image": "https://s3-eu-west-1.amazonaws.com/cointopay/pics/zencart.png",
+          "link": "https://github.com/Cointopay?q=zencart"
+        },
+        "oscommerce": {
+          "description": "Получить OSCommerce плагин на Github.com/Cointopay",
+          "image": "https://s3-eu-west-1.amazonaws.com/cointopay/pics/oscommerce.png",
+          "link": "https://github.com/Cointopay?q=oscommerce"
+        },
+        "drupalcommerce": {
+          "description": "Получить Drupal Commerce плагин на Github.com/Cointopay",
+          "image": "https://s3-eu-west-1.amazonaws.com/cointopay/pics/drupalcommerce.png",
+          "link": "https://github.com/Cointopay?q=drupal"
+        },
+        "xcart": {
+          "description": "Получить X-Cart плагин на Github.com/Cointopay",
+          "image": "https://s3-eu-west-1.amazonaws.com/cointopay/pics/xcart.png",
+          "link": "https://github.com/Cointopay?q=x-cart"
+        },
+        "membershippro": {
+          "description": "Получить Membership pro плагин на Github.com/Cointopay",
+          "image": "https://s3-eu-west-1.amazonaws.com/cointopay/pics/membershippro.jpg",
+          "link": "https://github.com/Cointopay?q=membership"
+        },
+        "arastta": {
+          "description": "Получить Arastta плагин на Github.com/Cointopay",
+          "image": "https://s3-eu-west-1.amazonaws.com/cointopay/pics/arastta.png",
+          "link": "https://github.com/Cointopay?q=aras"
+        }
+      }
+    },
+    "services": {
+      "slogan": "Ваши преимущества с Cointopay",
+      "text": {
+        "1": "Полностью функциональный кошелек",
+        "2": "Лучшие обменные курсы",
+        "3": "Многочисленные торговые пары криптовалют",
+        "4": "Баланс в реальном времени",
+        "5": "<a href=\"https://cointopay.freshdesk.com/support/solutions\">API Документация / Поддержка</a>",
+        "6": "Шифрование информации",
+        "7": "и многое другое..."
+      }
+    },
+    "apps": {
+      "wallet": {
+        "title": "Получить приложение “Кошелек”",
+        "description": "Управляйте своим кошельком Cointopay со своего смартфона и присоединяйтесь к торговому рынку без комиссий."
+      },
+      "pos": {
+        "title": "Получить приложение POS",
+        "description": "С приложением Cointopay POS вы сможете управлять вашим складом и производить прямые продажи с клиентами."
+      },
+      "tipping": {
+        "title": "Получить приложение для чаевых",
+        "description": "Tippr.today международный стандарт чаевых, теперь и для вашего смартфона."
+      }
+    }
+  },
+  "news": {
+    "title": "Последние новости о Cointopay и криптовалютах",
+    "add": "Добавить новость",
+    "button": "Сохранить"
+  },
+  "account": {
+    "overview": "Обзор счета",
+    "button_update": "Обновить",
+    "session_expired": "Сессия истекла",
+    "expiry_msg": "По соображениям конфиденциальности вы не можете получить доступ к этому разделу без действующего сеанса. Вы хотите войти снова?",
+    "btn_manage_pos": "POS Менеджер",
+    "email_notifications": "Уведомления по электронной почте",
+    "menu": {
+      "details": "Реквизиты счета",
+      "payout": "Информация о выплате",
+      "kyc": "KYC/AML",
+      "shopping": "Корзины для покупок",
+      "wallet": "Валюты кошелька",
+      "payments": "Платежные URLs",
+      "billing": "Биллинг",
+      "pos": "Point of Sale(POS)",
+      "referrals": "Рефералы"
+    },
+    "details": {
+      "verification": "Проверка учетной записи",
+      "verified": "Проверено – часть цикла аудита",
+      "un_verified": "Неподтвержденный аккаунт – пожалуйста, заполните свои данные",
+      "id": "Продавец / идентификатор аккаунта",
+      "api": "Ключ API учетной записи",
+      "security_code": "Защитный код",
+      "organization": "Организация",
+      "username": "Имя",
+      "password": "Пароль",
+      "email": "Электронная почта",
+      "twofa": {
+        "auth": "Поиск Auth (2FA)",
+        "reset": "Сброс кода 2FA",
+        "test": "Нажмите, чтобы проверить код 2FA",
+        "warning": "Включать 2FA только когда совпадают номера",
+        "on_off": "2FA Включить/Выключить"
+      },
+      "locale": "Locale"
+    },
+    "payout": {
+      "payout": "Выплата",
+      "option": "Paypal, Payeer",
+      "bank": "Банк выплаты",
+      "bank_name": "Имя банковского счета",
+      "iban": "IBAN банковского счета",
+      "bank_bic": "BIC/SWIFT код",
+      "address_book": "Адресная книга банка",
+      "crypto_address_book": "Криптоадресная книга",
+      "payout_message": "Выберите вариант Выплаты как для автоматизации выплат типа банк / фиат и криптовалюта. Выберите Keep, чтобы остановить автоматические выплаты. В любой момент вы можете выбрать произвольную банковскую / фиатную выплату, нажав кнопку ВЫПЛАТА внутри раздела кошелька. Кнопка ОТПРАВИТЬ в разделе кошелька используется для отправки криптографии (Ad-hoc) через блокчейн.",
+      "bank_verification_message": "Для выплаты в ваш банк мы проверим, принадлежит ли вам (международный) банковский счет. Обычно делается по имени сравнения. Если у нас есть сомнения, мы попросим вас отправить небольшую сумму и сообщение в наш банк, чтобы доказать, что это ваш банковский счет."
+    },
+    "kyc": {
+      "account_type": "тип аккаунта",
+      "business_information": "Деловая информация",
+      "beneficiary_information": "Информация о получателе",
+      "business_account": "Бизнес или Личный кабинет",
+      "business_name": "Наименование фирмы",
+      "business_address": "Бизнес адрес",
+      "business_postal_code": "Деловой почтовый индекс",
+      "business_city": "Деловой Город",
+      "business_state": "Деловое государство",
+      "business_country": "Бизнес страна",
+      "first_name": "Имя получателя",
+      "last_name": "Фамилия получателя",
+      "full_name": "Личное полное имя получателя",
+      "birth_date": "Дата рождения бенефициара",
+      "pep": "Вы политически значимый человек (ПКП)?",
+      "bank_address": "Адрес получателя",
+      "bank_postal_code": "Индекс получателя",
+      "bank_city": "Город получателя",
+      "bank_state": "Государственный бенефициар",
+      "bank_country": "Страна получателя",
+      "beneficiary_identity_information": "Информация, удостоверяющая личность получателя",
+      "profile_image_help": "Селфи, на котором вы держите паспорт / удостоверение личности с фотографией, вкл. дата и ник / имя пользователя",
+      "identity_type": "Тип идентификации",
+      "identity_number": "Номер удостоверения личности",
+      "identity_country": "Страна выдачи удостоверения личности",
+      "remove_account": "Удалить учетную запись",
+      "income_source": "Источник доходов",
+      "income_detail": "подробность"
+    },
+    "shopping_cart": {
+      "shopify_api": "API ключ",
+      "shopify_password": "Shopify пароль",
+      "shopify_url": "Shopify URL",
+      "shopify_script": "Shopify скрипт",
+      "ecwid": "Идентификатор магазина ECWID"
+    },
+    "wallet": {
+      "active_title": "Активные валюты",
+      "active_help": " Выберите валюты, которые вы хотите активно использовать. Их отключение не означает, что вы теряете баланс в них. Просто вы не видите их, пока не включите их снова. Обратите внимание, что клиент не могут производить платежи в отключенных валютах!",
+      "default_title": "Валюта ввода по умолчанию",
+      "default_help": " Это ваша предпочитаемая валюта ввода для функций отображения. Например, доллар или евро.",
+      "preferred_title": "Предпочтительная валюта",
+      "preferred_help": " Ваша любимая валюта, если вам нужно было выбрать одну, это она!",
+      "excluded_currencies_title": "Валюта исключена из автоматических ежедневных выплат",
+      "excluded_currencies_help": "Валюта исключена из автоматических ежедневных выплат",
+      "button": "Изменить",
+      "choose": "Выбрать валюту",
+      "auto_swap": "автоматический обмен на предпочитаемую валюту",
+      "flexibility_percentage": "Процент гибкости",
+      "help": ""
+    },
+    "payment_urls": {
+      "confirm": "URL подтверждения платежа",
+      "fail": "URL платеж не прошел",
+      "description": "Мы добавляем для подтверждения Url : ?CustomerReferenceNr=1&TransactionID=1&status=failed|paid&ConfirmCode=GeneratedUniqueCode"
+    },
+    "billing": {
+      "description": "Все входящие платежи облагаются пошлиной. Опция безлимитные членов устарела.",
+      "overview_confirmed_transactions": "Обзор подтвержденных транзакций"
+    },
+    "referrals": {
+      "description": "Ваши рефералы регистрируются автоматически. Используйте вашу личную ссылку https://cointopay.com/?r=[MerchantID] – чтобы заработать больше!"
+    }
+  },
+  "pos": {
+    "title": "POS",
+    "pos_manager": "POS менеджер",
+    "social_detail": "POS Social details",
+    "shipping_warning_msg": "Варианты доставки не установлены, и все страны выбраны для доставки",
+    "menu": {
+      "products": "Товары",
+      "tickets": "Билеты",
+      "receipts": "поступления",
+      "employees": "Сотрудники",
+      "coupons": "купоны",
+      "shipping": "Перевозка",
+      "office": "Бэк-офис"
+    },
+    "e_commerce": "Электронная торговля",
+    "btn_enable": "Включить электронную коммерцию",
+    "btn_disable": "Отключить электронную торговлю",
+    "btn_delete_all_products": "Удалить все товары",
+    "delete_catalog": "Удалить каталог",
+    "products": {
+      "title": "Создать / обновить продукт",
+      "select_category": "выбрать категорию",
+      "name": "наименование товара",
+      "description": "Описание",
+      "price": "Цена",
+      "sku": "SKU / EAN / штрих-кода / QR",
+      "quantity": "Уровень запасов",
+      "btn_add": "Добавить продукт",
+      "btn_save": "Сохранить",
+      "tabs": {
+        "categories": "категории",
+        "products": "Товары",
+        "favourites": "Избранные"
+      },
+      "favourites": {
+        "message": "Нет любимого продукта еще!"
+      },
+      "categories": {
+        "title": "Добавить / обновить категорию",
+        "category_name": "Название категории",
+        "select_color": "Выберите цвет",
+        "btn_save": "Сохранить",
+        "btn_add": "Добавить категорию"
+      },
+      "charge": {
+        "no_ticket": "Нет активного билета",
+        "total_price": "Итоговая цена",
+        "pay_with": "Оплатить с: ",
+        "btn_charge": "Заряжать",
+        "btn_delivery_charge": "заряд + Доставка"
+      }
+    },
+    "cart": {
+      "available": "доступный",
+      "add_to_cart": "Добавить в корзину",
+      "update_cart": "Добавить больше",
+      "continue_shopping": "Продолжить покупки",
+      "checkout": "Проверять, выписываться",
+      "clear_cart": "Очистить корзину",
+      "empty_cart": "Ваша корзина пуста"
+    },
+    "employees": {
+      "title": "POS",
+      "username": "имя пользователя",
+      "password": "Пароль / PIN",
+      "pin": "PIN",
+      "btn_login": "Авторизоваться",
+      "btn_add": "Добавить сотрудника",
+      "btn_save": "Сохранить"
+    },
+    "office": {
+      "product_catalog": "Каталог товаров",
+      "import": "импорт",
+      "export": "экспорт",
+      "import_from_shopify": "..или импортировать напрямую из shopify",
+      "shopify_link": "Введите ссылку Shopify",
+      "help": "Только проверенные продавцы могут выставлять товары в разделе магазинов!"
+    },
+    "tickets": {
+      "lbl_quantity": "Введите количество",
+      "stock_left": "Сток слева:",
+      "product_price": "Цена продукта:",
+      "total_price": "Итоговая цена:",
+      "btn_add": "добавлять",
+      "add": "Добавить билет",
+      "name": "Название билета",
+      "note": "Запись",
+      "btn_save": "Сохранить",
+      "add_product": "Добавить продукт",
+      "back": "назад"
+    },
+    "invoice": {
+      "message": "Отсканируйте QR-код или покажите отправителю",
+      "address": "Адрес",
+      "amount": "Количество",
+      "success": "Спасибо, ваш платеж прошел успешно. <br/> ID транзакции: #",
+      "failure": "Платеж не прошел",
+      "merchant": "коммерсант",
+      "invoice_number": "Выставленный счет#"
+    },
+    "receipts": {
+      "title": "Чек",
+      "email": "Введите адрес электронной почты",
+      "btn_send_receipt": "Квитанция по электронной почте"
+    },
+    "success": "Оплата успешна!",
+    "coupons": {
+      "headings": {
+        "coupon_code": "код купона",
+        "discount": "скидка",
+        "actions": "действия"
+      },
+      "no_data": "Купон недоступен",
+      "btn_add": "Добавить купон",
+      "list_title": "Купоны электронной коммерции",
+      "title": "Купон",
+      "coupon_code": "код купона",
+      "discount": "скидка",
+      "btn_save": "Сохранить"
+    },
+    "shipping": {
+      "title": "Варианты доставки электронной коммерции",
+      "btn_add": "Добавить опцию доставки",
+      "country": "Страна",
+      "shipping_method": "способ доставки",
+      "shipping_cost": "Стоимость доставки",
+      "btn_save": "Сохранить",
+      "no_data": "Доставка недоступна",
+      "headings": {
+        "country": "Страна",
+        "shipping_method": "способ доставки",
+        "shipping_cost": "Стоимость доставки",
+        "actions": "действия"
+      }
+    }
+  },
+  "shop": {
+    "locale": "место действия",
+    "checkout": {
+      "title": "Проверять, выписываться",
+      "billing": "Платежный адрес",
+      "billing_first_name": "Имя",
+      "billing_last_name": "Фамилия",
+      "organization": "организация",
+      "billing_phone": "Телефон",
+      "billing_email": "Адрес электронной почты",
+      "billing_skype": "Skype",
+      "billing_address": "Адрес",
+      "billing_postal_code": "Почтовый индекс",
+      "billing_city": "Город / место",
+      "billing_state": "Штат / провинция",
+      "billing_country": "Страна",
+      "shipping": "Адреса доставки",
+      "shipping_first_name": "Имя",
+      "shipping_last_name": "Фамилия",
+      "shipping_phone": "Телефон",
+      "shipping_email": "Адрес электронной почты",
+      "shipping_skype": "Skype",
+      "shipping_address": "Адрес",
+      "shipping_postal_code": "Почтовый индекс",
+      "shipping_city": "Город / место",
+      "shipping_state": "Штат / провинция",
+      "shipping_country": "Страна",
+      "select_currency": "Выберите валюту",
+      "process": "Процесс оплаты корзины",
+      "different_from_billing": "Отличается от биллинга",
+      "shipping_cost": "Стоимость доставки",
+      "cart": {
+        "title": "Сводка корзины",
+        "sub_total": "Промежуточный итог",
+        "shipping_cost": "Стоимость доставки",
+        "discount": "скидка",
+        "total": "Всего",
+        "btn_apply": "Применять",
+        "payment": "Оплата"
+      }
+    }
+  },
+  "about": {
+    "title": "О Cointopay",
+    "description": " Cointopay - это стартап-компания, базирующаяся в Нидерландах, официально созданная в 2014 году. Команда состоит из разработчика, менеджера и администратора. Наш основная цель заключается в предоставлении инновационных услуг интернет-платежей на основе новых криптовалют. Cointopay является поставщиком платежных услуг для предприятий и благотворительных организаций."
+  },
+  "login": {
+    "title": "Логин",
+    "username": "Имя пользователя",
+    "password": "Пароль",
+    "twofa": "Google 2FA опционально",
+    "button": "Логин",
+    "forgot": "Забыли пароль?",
+    "recover": "Восстановить пароль"
+  },
+  "signup": {
+    "title": "Зарегистрироваться",
+    "username": "Имя пользователя",
+    "password": "Пароль",
+    "twofa": "Google 2FA опционально",
+    "email": "Электронная почта",
+    "wallets": "Выбрать активные валюты кошелька",
+    "wallet_button": "Выбрать валюты",
+    "locale": "Язык",
+    "button": "Зарегистрироваться"
+  },
+  "invoice": {
+    "title": "Сгенерированный счет",
+    "invoice_url": "URL-адрес счета-фактуры",
+    "warning": "Пожалуйста, не платите по этому адресу счета-фактуры за пределами этого временного окна оплаты!",
+    "address": "Адрес",
+    "merchant": "коммерсант",
+    "currency": "Валюта",
+    "amount": "Сумма",
+    "fee": "Плата включена",
+    "transaction_id": "ID транзакции",
+    "expiry": "Истечение срока",
+    "reference": "Ссылка клиента",
+    "created_on": "Создано на",
+    "crypto": "CRYPTO",
+    "address_only": "КРИПТО-АДРЕС",
+    "full_crypto_link": "КРИПТО ЛИНКЕ",
+    "tzero": "Мгновенный",
+    "fiat": "FIAT/Card",
+    "invoice": "Счет",
+    "coin": "Монета",
+    "status": "Статус",
+    "created": "Создан",
+    "input_amount": "Сумма ввода",
+    "input_currency": "Валюта ввода",
+    "confirmed": "Подтверждено",
+    "expiry_on": "Срок истекает",
+    "datetime": "Дата и время",
+    "confirmed_message": "Платеж подтвержден",
+    "failed_message": "Платеж не прошел",
+    "re_open": "возобновлять",
+    "transaction_scheduled_for_revalidation": "Транзакция запланирована для повторной проверки",
+    "missing_amount": "Создать счет для оставшегося платежа",
+    "generate_invoice": "Создать счет",
+    "block_explorer": "Исследовать Блок",
+    "refund": "Возвращать деньги",
+    "help": "Помогите",
+    "pay_with_different_currency": "Оплатить другой валютой",
+    "add": "Добавлять",
+    "forward_invoice": "авансовый счет",
+    "cart_status": "Статус заказа",
+    "delivery_address": "Адрес доставки",
+    "order_information": "запросить информацию",
+    "view_address": "Посмотреть адрес",
+    "view_order": "Посмотреть заказ",
+    "shipping_cost": "Стоимость доставки",
+    "discount": "скидка",
+    "fiat_options": "Варианты Fiat"
+  },
+  "misc": {
+    "services": "Сервисы",
+    "social": "Социальные",
+    "company": "Компания"
+  },
+  "address_book": {
+    "title": "Адресная книга",
+    "address": "Адрес",
+    "tag": "Memo/Message/Tag",
+    "description": "Описание",
+    "currency": "Currency",
+    "new": "Новый адрес",
+    "save": "Сохранить",
+    "edit": "редактировать",
+    "delete": "удалять",
+    "select": "Выбрать",
+    "select_default": "Выберите по умолчанию",
+    "remove_default": "Удалить по умолчанию",
+    "actions": "действия"
+  },
+  "newsletter": {
+    "title": "Подписывайся / Отказаться от подписки",
+    "email": "Адрес электронной почты",
+    "subscribe": "Подписывайся",
+    "un_subscribe": "Отказаться от подписки"
+  },
+  "ratings": {
+    "author": "Полное имя",
+    "email": "Адрес электронной почты",
+    "title": "заглавие",
+    "comment": "Обзор",
+    "btn_rate": "Показатель"
+  },
+  "errors": {
+    "required": "Required",
+    "invalid_url": "Invalid Url",
+    "invalid_email": "Invalid email address",
+    "no_match": "Passwords do not match",
+    "invalid_date": "Invalid date, format",
+    "invalid_decimal": "Amount value invalid, format",
+    "min": "Min value allowed ",
+    "invalid_password_criteria": "Please check the password criteria",
+    "invalid_phone": "Invalid phone number, format",
+    "min_len": "Min length ",
+    "max_len": "Max length ",
+    "numeric": "Please provide a valid numeric value",
+    "invalid_format": "Invalid format"
+  }
+}

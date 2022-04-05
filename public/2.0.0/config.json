@@ -1,0 +1,517 @@
+[
+  {
+    "currency": "AED",
+    "type": "emirates",
+    "legalType": "BUSINESS",
+    "details": {
+      "IBAN": ""
+    },
+    "required": "IBAN"
+  },
+  {
+    "currency": "ARS",
+    "type": "argentina",
+    "details": {
+      "legalType": "BUSINESS",
+      "taxId": "",
+      "accountNumber": ""
+    },
+    "required": "taxId,accountNumber"
+  },
+  {
+    "currency": "AUD",
+    "type": "australian",
+    "details": {
+      "legalType": "PRIVATE",
+      "bsbCode": "",
+      "accountNumber": ""
+    },
+    "required": "bsbCode,accountNumber"
+  },
+  {
+    "currency": "BDT",
+    "type": "bangladesh",
+    "details": {
+      "legalType": "PRIVATE",
+      "bankCode": "",
+      "branchCode": "",
+      "accountNumber": ""
+    },
+    "required": "bankCode,branchCode,accountNumber"
+  },
+  {
+    "currency": "BGN",
+    "type": "iban",
+    "details": {
+      "legalType": "BUSINESS",
+      "IBAN": ""
+    },
+    "required": "IBAN"
+  },
+  {
+    "currency": "BRL",
+    "type": "brazil",
+    "details": {
+      "legalType": "PRIVATE",
+      "bankCode": "",
+      "branchCode": "",
+      "accountNumber": "",
+      "accountType": "CHECKING",
+      "cpf": "",
+      "phoneNumber": ""
+    },
+    "required": "bankCode,branchCode,accountNumber,cpf,phoneNumber,accountType"
+  },
+  {
+    "currency": "CAD",
+    "type": "canadian",
+    "details": {
+      "legalType": "BUSINESS",
+      "institutionNumber": "",
+      "transitNumber": "",
+      "accountNumber": "",
+      "accountType": "CHECKING"
+    },
+    "required": "institutionNumber,transitNumber,accountNumber,accountType"
+  },
+  {
+    "currency": "CHF",
+    "type": "iban",
+    "details": {
+      "legalType": "BUSINESS",
+      "IBAN": ""
+    },
+    "required": "IBAN"
+  },
+  {
+    "currency": "CLP",
+    "type": "chile",
+    "details": {
+      "legalType": "BUSINESS",
+      "bankCode": "",
+      "accountNumber": "",
+      "rut": "",
+      "accountType": "CHECKING",
+      "phoneNumber": ""
+    },
+    "required": "bankCode,accountNumber,rut,phoneNumber,accountType"
+  },
+  {
+    "currency": "CNY",
+    "type": "chinese_card",
+    "details": {
+      "legalType": "PRIVATE",
+      "cardNumber": ""
+    },
+    "required": "cardNumber"
+  },
+  {
+    "currency": "CZK",
+    "type": "czech",
+    "details": {
+      "legalType": "BUSINESS",
+      "IBAN": ""
+    },
+    "required": "IBAN"
+  },
+  {
+    "currency": "DKK",
+    "type": "iban",
+    "details": {
+      "legalType": "BUSINESS",
+      "IBAN": ""
+    },
+    "required": "IBAN"
+  },
+  {
+    "currency": "EGP",
+    "type": "egypt_local",
+    "details": {
+      "legalType": "BUSINESS",
+      "bankCode": "",
+      "accountNumber": ""
+    },
+    "required": "bankCode,accountNumber"
+  },
+  {
+    "currency": "EUR",
+    "type": "iban",
+    "details": {
+      "legalType": "BUSINESS",
+      "IBAN": ""
+    },
+    "required": "IBAN"
+  },
+  {
+    "currency": "GBP",
+    "type": "sort_code",
+    "details": {
+      "legalType": "BUSINESS",
+      "sortCode": "",
+      "accountNumber": ""
+    },
+    "required": "sortCode,accountNumber"
+  },
+  {
+    "currency": "GEL",
+    "type": "iban",
+    "details": {
+      "legalType": "BUSINESS",
+      "IBAN": ""
+    },
+    "required": "IBAN"
+  },
+  {
+    "currency": "GHS",
+    "type": "ghana_local",
+    "details": {
+      "legalType": "BUSINESS",
+      "bankCode": "",
+      "accountNumber": ""
+    },
+    "required": "bankCode,accountNumber"
+  },
+  {
+    "currency": "HKD",
+    "type": "hongkong",
+    "details": {
+      "legalType": "BUSINESS",
+      "bankCode": "",
+      "accountNumber": ""
+    },
+    "required": "bankCode,accountNumber"
+  },
+  {
+    "currency": "HRK",
+    "type": "iban",
+    "details": {
+      "legalType": "BUSINESS",
+      "IBAN": ""
+    },
+    "required": "IBAN"
+  },
+  {
+    "currency": "HUF",
+    "type": "iban",
+    "details": {
+      "legalType": "BUSINESS",
+      "IBAN": ""
+    },
+    "required": "IBAN"
+  },
+  {
+    "currency": "IDR",
+    "type": "indonesian",
+    "details": {
+      "legalType": "BUSINESS",
+      "bankCode": "",
+      "accountNumber": ""
+    },
+    "required": "bankCode,accountNumber"
+  },
+  {
+    "currency": "ILS",
+    "type": "israeli_local",
+    "details": {
+      "legalType": "BUSINESS",
+      "IBAN": ""
+    },
+    "required": "IBAN"
+  },
+  {
+    "type": "israeli_bank_code",
+    "details": {
+      "legalType": "BUSINESS",
+      "bankCode": "",
+      "branchCode": "",
+      "accountNumber": ""
+    },
+    "required": "bankCode,branchCode,accountNumber"
+  },
+  {
+    "currency": "INR",
+    "type": "indian",
+    "details": {
+      "legalType": "BUSINESS",
+      "ifscCode": "",
+      "accountNumber": ""
+    },
+    "required": "ifscCode,accountNumber"
+  },
+  {
+    "currency": "JPY",
+    "type": "japanese",
+    "details": {
+      "legalType": "BUSINESS",
+      "bankCode": "",
+      "branchCode": "",
+      "accountType": "",
+      "accountNumber": ""
+    },
+    "required": "bankCode,branchCode,accountType,accountNumber"
+  },
+  {
+    "currency": "KES",
+    "type": "kenya_local",
+    "details": {
+      "legalType": "BUSINESS",
+      "bankCode": "",
+      "accountNumber": ""
+    },
+    "required": "bankCode,accountNumber"
+  },
+  {
+    "currency": "KES",
+    "type": "kenya_mobile",
+    "details": {
+      "legalType": "BUSINESS",
+      "accountNumber": ""
+    },
+    "required": "accountNumber"
+  },
+  {
+    "currency": "LKR",
+    "type": "srilanka",
+    "details": {
+      "legalType": "BUSINESS",
+      "bankCode": "",
+      "branchCode": "",
+      "accountNumber": ""
+    },
+    "required": "bankCode,branchCode,accountNumber"
+  },
+  {
+    "currency": "MAD",
+    "type": "morocco",
+    "details": {
+      "legalType": "BUSINESS",
+      "bankCode": "",
+      "accountNumber": ""
+    },
+    "required": "bankCode,accountNumber"
+  },
+  {
+    "currency": "MXN",
+    "type": "mexican",
+    "details": {
+      "legalType": "BUSINESS",
+      "clabe": ""
+    },
+    "required": "clabe"
+  },
+  {
+    "currency": "MYR",
+    "type": "malaysian",
+    "details": {
+      "legalType": "BUSINESS",
+      "swiftCode": "",
+      "accountNumber": ""
+    },
+    "required": "swiftCode,accountNumber"
+  },
+  {
+    "currency": "NGN",
+    "type": "nigeria",
+    "details": {
+      "legalType": "BUSINESS",
+      "bankCode": "",
+      "accountNumber": ""
+    },
+    "required": "bankCode,accountNumber"
+  },
+  {
+    "currency": "NOK",
+    "type": "iban",
+    "details": {
+      "legalType": "BUSINESS",
+      "IBAN": ""
+    },
+    "required": "IBAN"
+  },
+  {
+    "currency": "NPR",
+    "type": "nepal",
+    "legalType": "PRIVATE",
+    "details": {
+      "bankCode": "",
+      "accountNumber": ""
+    },
+    "required": "bankCode,accountNumber"
+  },
+  {
+    "currency": "NZD",
+    "type": "newzealand",
+    "details": {
+      "legalType": "BUSINESS",
+      "accountNumber": ""
+    },
+    "required": "accountNumber"
+  },
+  {
+    "currency": "PEN",
+    "type": "peru",
+    "details": {
+      "legalType": "BUSINESS",
+      "bankCode": "",
+      "accountNumber": "",
+      "accountType": "",
+      "idDocumentType": "",
+      "idDocumentNumber": "",
+      "phoneNumber": ""
+    },
+    "required": "bankCode,accountNumber,accountType,idDocumentType,idDocumentNumber,phoneNumber"
+  },
+  {
+    "currency": "PHP",
+    "type": "philippines",
+    "details": {
+      "legalType": "BUSINESS",
+      "bankCode": "",
+      "accountNumber": "",
+      "address": {
+        "country": "",
+        "city": "",
+        "postCode": "",
+        "firstLine": ""
+      }
+    },
+    "required": "bankCode,accountNumber,country,city,postCode,firstLine"
+  },
+  {
+    "currency": "PKR",
+    "type": "iban",
+    "details": {
+      "legalType": "PRIVATE",
+      "IBAN": ""
+    },
+    "required": "IBAN"
+  },
+  {
+    "currency": "PLN",
+    "type": "iban",
+    "details": {
+      "legalType": "BUSINESS",
+      "IBAN": ""
+    },
+    "required": "IBAN"
+  },
+  {
+    "currency": "RON",
+    "type": "iban",
+    "details": {
+      "legalType": "BUSINESS",
+      "IBAN": ""
+    },
+    "required": "IBAN"
+  },
+  {
+    "currency": "RUB",
+    "type": "russiarapida",
+    "details": {
+      "legalType": "PRIVATE",
+      "bankCode": "",
+      "accountNumber": "",
+      "russiaRegion": "",
+      "address": {
+        "country": "",
+        "city": "",
+        "postCode": "",
+        "firstLine": ""
+      }
+    },
+    "required": "bankCode,accountNumber,russiaRegion,country,city,postCode,firstLine"
+  },
+  {
+    "currency": "SEK",
+    "type": "iban",
+    "details": {
+      "legalType": "BUSINESS",
+      "IBAN": ""
+    },
+    "required": "IBAN"
+  },
+  {
+    "currency": "SGD",
+    "type": "singapore",
+    "details": {
+      "legalType": "BUSINESS",
+      "bankCode": "",
+      "accountNumber": ""
+    },
+    "required": "bankCode,accountNumber"
+  },
+  {
+    "currency": "THB",
+    "type": "thailand",
+    "details": {
+      "legalType": "BUSINESS",
+      "bankCode": "",
+      "accountNumber": "",
+      "address": {
+        "country": "",
+        "city": "",
+        "postCode": "",
+        "firstLine": ""
+      }
+    },
+    "required": "bankCode,accountNumber,country,city,postCode,firstLine"
+  },
+  {
+    "currency": "TRY",
+    "type": "turkish_earthport",
+    "details": {
+      "legalType": "BUSINESS",
+      "IBAN": ""
+    },
+    "required": "IBAN"
+  },
+  {
+    "currency": "UAH",
+    "type": "privatbank",
+    "details": {
+      "legalType": "PRIVATE",
+      "phoneNumber": "",
+      "accountNumber": ""
+    },
+    "required": "phoneNumber,accountNumber"
+  },
+  {
+    "currency": "USD",
+    "type": "aba",
+    "details": {
+      "legalType": "BUSINESS",
+      "abartn": "",
+      "accountNumber": "",
+      "accountType": "CHECKING",
+      "address": {
+        "country": "",
+        "state": "",
+        "city": "",
+        "postCode": "",
+        "firstLine": ""
+      }
+    },
+    "required": "abartn,accountNumber,country,state,city,postCode,firstLine"
+  },
+  {
+    "currency": "VND",
+    "type": "vietname_earthport",
+    "details": {
+      "legalType": "BUSINESS",
+      "swiftCode": "",
+      "branchCode": "",
+      "accountNumber": ""
+    },
+    "required": "swiftCode,branchCode,accountNumber"
+  },
+  {
+    "currency": "ZAR",
+    "type": "southafrica",
+    "details": {
+      "legalType": "BUSINESS",
+      "swiftCode": "",
+      "accountNumber": ""
+    },
+    "required": "swiftCode,accountNumber"
+  }
+]

@@ -1,0 +1,692 @@
+{
+  "menu": {
+    "news": "News",
+    "wallet": "Brieftasche",
+    "account": "Konto",
+    "pos": "POS",
+    "shop": "Geschäft",
+    "cart": "Wagen",
+    "support": "Support",
+    "about": "Über",
+    "login_signup": "Anmelden / Registrieren",
+    "logout": "Logout"
+  },
+  "dashboard": {
+    "title": "Wallet Dashboard",
+    "overview": "Brieftaschenübersicht",
+    "total": "Gesamtgeldbeutelguthaben",
+    "metrics": "Schlüsselmetriken",
+    "waiting": "Warten",
+    "paid": "Bezahlt",
+    "expired": "Abgelaufen",
+    "webshop": "Webshop-Übersicht",
+    "transactions_per_day": "Transaktionen pro Tag",
+    "revenue_per_day": "Umsatz pro Tag",
+    "transactions_per_coin": "Transaktionen pro Münze",
+    "transactions": "Transaktionen",
+    "report_incoming": "Bericht eingehend",
+    "report_outgoing": "Ausgehender Bericht",
+    "chart_market_title": "Marktdiagramm",
+    "actions": "Brieftaschenaktionen",
+    "send": "Senden",
+    "send_description": "Die Aktion -Senden- sendet Ihre Kryptowährung an eine andere Person. Sie müssen die Adresse des Empfängers und den zu sendenden Betrag kennen.",
+    "receive": "Empfangen",
+    "receive_description": "Empfangen Sie die Kryptowährung für Ihr Konto. Geben Sie dem Empfänger die Empfangsadresse an.",
+    "ltr": "Adresse",
+    "ltr_description": "LTR-Adressen bleiben ein Jahr lang geöffnet. Sie können mehrere Beträge erhalten, sobald Sie Ihre gesamten erhaltenen Beträge konsolidiert haben, stehen sie für andere Aktionen zur Verfügung.",
+    "swap": "Swap",
+    "swap_description": "Wechseln Sie von einer Kryptowährung zu einer anderen. Beachten Sie, dass nicht alle zum Tauschen aktiviert sind.",
+    "vtoken": "vToken",
+    "vtoken_description": "Erstellen Sie vtokens als Wertdarstellung. Einfach zu senden und zu empfangen.",
+    "buy": "Kaufen",
+    "buy_description": "Kryptowährung einfach per Überweisung oder iDEAL-Zahlung kaufen",
+    "payout": "Auszahlung",
+    "payout_description": "Auszahlung in fiat Währung wie EURO",
+    "trade": "Handeln",
+    "trade_description": "Handeln Sie mit Ihrem Krypto-Guthaben auf unserer internen Börse namens reflextrader.com",
+    "help": "Dashboard-Aktionen",
+    "update_cart_status": "Bestellstatus aktualisieren",
+    "btn_update_cart_status": "Update Status",
+    "warning_message": "Bitte füllen Sie die KYC / AML-Formularfelder in Ihrem Konto aus [HERE]. Sie können keine Krypto empfangen und / oder kaufen, bis Ihre Informationen von unserem Compliance-Team überprüft wurden. Danke für Ihr Verständnis."
+  },
+  "send": {
+    "title": "Senden",
+    "amount": "Betrag",
+    "coin_address": "Münzadresse",
+    "scan": "Scannen",
+    "upload": "Upload",
+    "button": "Senden",
+    "address_book": "Adressbuch",
+    "modals": {
+      "pin": {
+        "desc": "Geben Sie die PIN [PIN] ein, um die sofortige Zahlung von TZERO zu bestätigen. <br/> [AMOUNT] wird gesendet!"
+      }
+    }
+  },
+  "receive": {
+    "title": "Empfangen",
+    "button": "Empfangen",
+    "input_currency": "Eingabewährung",
+    "amount": "Betrag",
+    "output_currency": "Ausgabewährung",
+    "reference": "Ihre Referenz",
+    "email": "Als Rechnung per Post versenden",
+    "schedule": "Zeitplan als Rechnung",
+    "schedule_dropdown": "Zeitplan auswählen"
+  },
+  "buy": {
+    "title": "Kaufen",
+    "button": "Kaufen",
+    "input_currency": "Eingabewährung",
+    "amount": "Betrag"
+  },
+  "ltr": {
+    "title": "LTR",
+    "load_long_term_addresses": "Langzeitadressen laden",
+    "create": "Anmachen",
+    "consolidate": "Konsolidieren"
+  },
+  "swap": {
+    "title": "Swap",
+    "swap_to": "Swap to",
+    "button": "Swap",
+    "amount": "Betrag"
+  },
+  "vtoken": {
+    "title": "vToken",
+    "button_create": "vToken erstellen",
+    "button_claim": "vToken beanspruchen",
+    "amount": "Betrag",
+    "token": "Token"
+  },
+  "payout": {
+    "title": "Auszahlen",
+    "amount": "Eingabebetrag",
+    "button": "Auszahlen",
+    "address_book": "Adressbuch",
+    "remove": "Entfernen",
+    "message": "STANDARD: Kontobasierte Auszahlung"
+  },
+  "home": {
+    "alert": "Systemnachricht",
+    "slogan": "Moderne Währungszahlungen",
+    "sub_slogan": "Crypto Currency Banking, Handel, Webshop-Integration und Point of Sale",
+    "signup": "Jetzt anmelden",
+    "auth_message": "Hi [USERNAME], hier klicken, um zu gelangen",
+    "your_dashboard": "Ihr Dashboard",
+    "transaction": {
+      "slogan": "Erstellen Sie ein kostenloses Konto",
+      "email": "Email",
+      "password": "Passwort",
+      "input_currency": "Eingabewährung",
+      "amount": "Betrag",
+      "output_currency": "Ausgabewährung",
+      "try_it_for_free": "Probieren Sie es kostenlos aus"
+    },
+    "plugins": {
+      "slogan": "Crypto-Zahlungs-Plugins für Ihren Webshop",
+      "learn_more": "Weitere Informationen",
+      "sliders": {
+        "magento": {
+          "description": "Laden Sie das Magento-Plugin unter Github.com/Cointopay herunter",
+          "image": "https://s3-eu-west-1.amazonaws.com/cointopay/pics/Magento.png",
+          "link": "https://github.com/Cointopay?q=magento"
+        },
+        "prestashop": {
+          "description": "Holen Sie sich das Prestashop-Plugin unter Github.com/Cointopay",
+          "image": "https://s3-eu-west-1.amazonaws.com/cointopay/pics/prestashop.png",
+          "link": "https://github.com/Cointopay?q=presta"
+        },
+        "ecwid": {
+          "description": "ECWID-Plugin von ecwid-Apps installieren",
+          "image": "https://s3-eu-west-1.amazonaws.com/cointopay/pics/ecwid.png",
+          "link": "https://www.ecwid.com/apps/"
+        },
+        "woocommerce": {
+          "description": "Holen Sie sich das Woocommerce-Plugin unter Github.com/Cointopay",
+          "image": "https://s3-eu-west-1.amazonaws.com/cointopay/pics/woocommerce.png",
+          "link": "https://github.com/Cointopay?q=wordpress"
+        },
+        "opencart": {
+          "description": "Holen Sie sich das Opencart-Plugin unter Github.com/Cointopay",
+          "image": "https://s3-eu-west-1.amazonaws.com/cointopay/pics/opencart.png",
+          "link": "https://github.com/Cointopay?q=opencart"
+        },
+        "whmcs": {
+          "description": "Holen Sie sich das WHMCS-Plugin unter Github.com/Cointopay",
+          "image": "https://s3-eu-west-1.amazonaws.com/cointopay/pics/whmcs.jpg",
+          "link": "https://github.com/Cointopay?q=whmcs"
+        },
+        "shopify": {
+          "description": "Laden Sie das indirekte YouTube-Video von Shopify herunter",
+          "image": "https://s3-eu-west-1.amazonaws.com/cointopay/pics/shopify.png",
+          "link": "https://www.youtube.com/watch?v=eM_dYQKCqlI"
+        },
+        "gambio": {
+          "description": "Holen Sie sich das Gambio-Plugin unter Github.com/Cointopay",
+          "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTsOnMS-KmfgGeRVZJNRkMwkAAiT949z4V87Q&usqp=CAU",
+          "link": "https://github.com/Cointopay/Gambio"
+        },
+        "box_billing": {
+          "description": "Holen Sie sich das Boxbilling-Plugin unter Github.com/Cointopay",
+          "image": "https://s3-eu-west-1.amazonaws.com/cointopay/pics/boxbilling.jpg",
+          "link": "https://github.com/Cointopay?q=box"
+        },
+        "tomatocart": {
+          "description": "Holen Sie sich das Tomatocart-Plugin unter Github.com/Cointopay",
+          "image": "https://s3-eu-west-1.amazonaws.com/cointopay/pics/tomatocart.png",
+          "link": "https://github.com/Cointopay?q=tomato"
+        },
+        "odoo": {
+          "description": "Holen Sie sich das Odoo-Plugin unter Github.com/Cointopay",
+          "image": "https://s3-eu-west-1.amazonaws.com/cointopay/pics/odoo.png",
+          "link": "https://github.com/Cointopay?q=odoo"
+        },
+        "wordpressecommerce": {
+          "description": "Holen Sie sich das Wordpress-E-Commerce-Plugin unter Github.com/Cointopay",
+          "image": "https://s3-eu-west-1.amazonaws.com/cointopay/pics/wordpressecommerce.jpg",
+          "link": "https://github.com/Cointopay?q=wordpress"
+        },
+        "blesta": {
+          "description": "Holen Sie sich das Blesta-Plugin unter Github.com/Cointopay",
+          "image": "https://s3-eu-west-1.amazonaws.com/cointopay/pics/blesta.png",
+          "link": "https://github.com/Cointopay?q=blesta"
+        },
+        "easydigitaldownloads": {
+          "description": "Laden Sie das Plugin für WP Easy Digital Downloads unter Github.com/Cointopay herunter",
+          "image": "https://s3-eu-west-1.amazonaws.com/cointopay/pics/easydigitaldownloads.png",
+          "link": "https://github.com/Cointopay?q=easy"
+        },
+        "ubercart": {
+          "description": "Holen Sie sich das Ubercart-Plugin unter Github.com/Cointopay",
+          "image": "https://s3-eu-west-1.amazonaws.com/cointopay/pics/ubercart.png",
+          "link": "https://github.com/Cointopay?q=uber"
+        },
+        "cscart": {
+          "description": "Holen Sie sich das CS-Cart-Plugin unter Github.com/Cointopay",
+          "image": "https://s3-eu-west-1.amazonaws.com/cointopay/pics/cscart.png",
+          "link": "https://github.com/Cointopay?q=cs-cart"
+        },
+        "joomlavirtuemart": {
+          "description": "Holen Sie sich das Joomla-Plugin unter Github.com/Cointopay",
+          "image": "https://s3-eu-west-1.amazonaws.com/cointopay/pics/joomla.png",
+          "link": "https://github.com/Cointopay?q=joomla"
+        },
+        "zencart": {
+          "description": "Holen Sie sich das Zencart-Plugin unter Github.com/Cointopay",
+          "image": "https://s3-eu-west-1.amazonaws.com/cointopay/pics/zencart.png",
+          "link": "https://github.com/Cointopay?q=zencart"
+        },
+        "oscommerce": {
+          "description": "Holen Sie sich das OSCommerce-Plugin unter Github.com/Cointopay",
+          "image": "https://s3-eu-west-1.amazonaws.com/cointopay/pics/oscommerce.png",
+          "link": "https://github.com/Cointopay?q=oscommerce"
+        },
+        "drupalcommerce": {
+          "description": "Holen Sie sich das Drupal Commerce-Plugin unter Github.com/Cointopay",
+          "image": "https://s3-eu-west-1.amazonaws.com/cointopay/pics/drupalcommerce.png",
+          "link": "https://github.com/Cointopay?q=drupal"
+        },
+        "xcart": {
+          "description": "Holen Sie sich das X-Cart-Plugin unter Github.com/Cointopay",
+          "image": "https://s3-eu-west-1.amazonaws.com/cointopay/pics/xcart.png",
+          "link": "https://github.com/Cointopay?q=x-cart"
+        },
+        "membershippro": {
+          "description": "Holen Sie sich das Membership Pro-Plugin unter Github.com/Cointopay",
+          "image": "https://s3-eu-west-1.amazonaws.com/cointopay/pics/membershippro.jpg",
+          "link": "https://github.com/Cointopay?q=membership"
+        },
+        "arastta": {
+          "description": "Holen Sie sich das Arastta-Plugin unter Github.com/Cointopay",
+          "image": "https://s3-eu-west-1.amazonaws.com/cointopay/pics/arastta.png",
+          "link": "https://github.com/Cointopay?q=aras"
+        }
+      }
+    },
+    "services": {
+      "slogan": "Ihre Vorteile mit Cointopay",
+      "text": {
+        "1": "Voll funktionsfähige Webbrieftasche",
+        "2": "Bestmögliche Wechselkurse",
+        "3": "Mehrere Handelspaare für Kryptomünzen",
+        "4": "Echtzeitbilanz",
+        "5": "<a href=\"https://cointopay.freshdesk.com/support/solutions\">API-Dokumentation / Support</a>",
+        "6": "Verschlüsselung der Daten im Ruhezustand",
+        "7": "und mehr.."
+      }
+    },
+    "apps": {
+      "wallet": {
+        "title": "Holen Sie sich die Wallet-App",
+        "description": "Verwalten Sie Ihre Cointopay Wallet und treten Sie ohne Gebühren auf Ihrem Smartphone in den Handel ein."
+      },
+      "pos": {
+        "title": "Holen Sie sich die POS-App",
+        "description": "Mit der Cointopay POS-App können Sie Bestandsverwaltung und direkten Verkauf mit Kunden durchführen."
+      },
+      "tipping": {
+        "title": "Holen Sie sich die Tipp-App",
+        "description": "Tippr.today ist heute der globale Tipp-Standard, der jetzt auf Ihrem Smartphone verfügbar ist."
+      }
+    }
+  },
+  "news": {
+    "title": "Aktuelle Cointopay- und Krypto-Währungsnachrichten",
+    "add": "Nachrichten hinzufügen",
+    "button": "Speichern"
+  },
+  "account": {
+    "overview": "Kontoübersicht",
+    "button_update": "Update",
+    "session_expired": "Sitzung abgelaufen",
+    "expiry_msg": "Möchten Sie sich aus Datenschutzgründen ohne eine gültige Sitzung nicht auf diesen Abschnitt zugreifen? Möchten Sie sich erneut anmelden?",
+    "btn_manage_pos": "POS Manager",
+    "email_notifications": "E-Mail Benachrichtigungen",
+    "menu": {
+      "details": "Kontodetails",
+      "payout": "Details auszahlen",
+      "kyc": "KYC/AML",
+      "shopping": "Einkaufswagen",
+      "wallet": "Brieftaschenwährung",
+      "payments": "Zahlungs-URLs",
+      "billing": "Abrechnung",
+      "pos": "Point of Sale(POS)",
+      "referrals": "Verweise"
+    },
+    "details": {
+      "verification": "Kontoüberprüfung",
+      "verified": "Verified - Teil des Prüfzyklus",
+      "un_verified": "Ungeprüfter Account - bitte geben Sie Ihre Daten ein",
+      "id": "Händler-Kontonummer",
+      "api": "Account-API-Schlüssel",
+      "security_code": "Sicherheitscode",
+      "organization": "Organisation",
+      "username": "Spitzname",
+      "password": "Passwort",
+      "email": "Email",
+      "twofa": {
+        "auth": "Google Auth (2FA)",
+        "reset": "2FA-Code zurücksetzen",
+        "test": "Klicken Sie hier, um den 2FA-Code zu testen",
+        "warning": "Nur 2FA einschalten, wenn Zahlen übereinstimmen",
+        "on_off": "2FA Ein / Aus"
+      },
+      "locale": "Locale"
+    },
+    "payout": {
+      "payout": "Auszahlung",
+      "option": "Paypal, Payeer",
+      "bank": "Bank auszahlen",
+      "bank_name": "Name auf Bankkonto",
+      "iban": "IBAN/Bankkonto",
+      "bank_bic": "BIC/SWIFT-Code",
+      "address_book": "Adressbuch der Bank",
+      "crypto_address_book": "Krypto-Adressbuch",
+      "payout_message": "Wählen Sie Auszahlung als Option, um Auszahlungen vom Typ Bank / Fiat und Krypto zu automatisieren. Wählen Sie Behalten, um die automatische Auszahlung zu beenden. Sie können sich jederzeit für eine Ad-hoc-Bank- / Fiat-Auszahlung entscheiden, indem Sie auf die Schaltfläche AUSZAHLEN im Brieftaschenbereich klicken. Die Schaltfläche SENDEN im Brieftaschenbereich wird zum Senden von Krypto (Ad-hoc) über die Blockchain verwendet.",
+      "bank_verification_message": "Zur Auszahlung an Ihre Bank prüfen wir, ob das (internationale) Bankkonto Ihnen gehört. Normalerweise durch Namensvergleich. Im Zweifelsfall bitten wir Sie, einen kleinen Betrag und eine Nachricht an unsere Bank zu senden, um zu beweisen, dass es sich um Ihr Bankkonto handelt."
+    },
+    "kyc": {
+      "account_type": "Konto Typ",
+      "business_information": "Geschäftsinformationen",
+      "beneficiary_information": "Informationen des Begünstigten",
+      "business_account": "Geschäfts- oder Privatkonto",
+      "business_name": "Geschäftsname",
+      "business_address": "Geschäftsadresse",
+      "business_postal_code": "Geschäftliche Postleitzahl",
+      "business_city": "Geschäftsstadt",
+      "business_state": "Geschäftszustand",
+      "business_country": "Wirtschaftsland",
+      "first_name": "Vorname des Begünstigten",
+      "last_name": "Nachname des Begünstigten",
+      "full_name": "Persönlicher vollständiger Name des Empfängers",
+      "birth_date": "Geburtsdatum des Begünstigten",
+      "pep": "Sind Sie eine politisch exponierte Person (PEP)?",
+      "bank_address": "Adresse Empfänger",
+      "bank_postal_code": "Empfänger der Postleitzahl",
+      "bank_city": "City-Begünstigter",
+      "bank_state": "Staatlicher Begünstigter",
+      "bank_country": "Länderempfänger",
+      "beneficiary_identity_information": "Informationen zur Identität des Begünstigten",
+      "profile_image_help": "Ein Selfie von Ihnen mit dem Reisepass / Lichtbildausweis inkl. Datum und Spitzname / Benutzername",
+      "identity_type": "Identitätstyp",
+      "identity_number": "Personalausweisnummer",
+      "identity_country": "Identitätsproblem Land",
+      "remove_account": "Konto entfernen",
+      "income_source": "Einkommensquelle",
+      "income_detail": "Detail"
+    },
+    "shopping_cart": {
+      "shopify_api": "API-Schlüssel",
+      "shopify_password": "Shopify-Passwort",
+      "shopify_url": "Shopify-URL",
+      "shopify_script": "Shopify-Skript",
+      "ecwid": "ECWID-Shop-ID"
+    },
+    "wallet": {
+      "active_title": "Aktive Währungen",
+      "active_help": "Wählen Sie die Währungen aus, die Sie aktiv verwenden möchten. Das Deaktivieren der Währungen bedeutet nicht, dass Sie das Gleichgewicht verlieren. Sie werden lediglich in anderen Ansichten angezeigt, bis Sie sie erneut aktivieren. Beachten Sie, dass dies Endkunden sind kann nicht auf einer deaktivierten Währung auschecken!",
+      "default_title": "Standard-Eingabewährung",
+      "default_help": "Dies ist Ihre bevorzugte Eingabewährung für die Anzeigefunktionalität. Zum Beispiel Dollar oder Euro.",
+      "preferred_title": "Bevorzugte Währung",
+      "preferred_help": "Ihre bevorzugte Währung, wenn Sie eine auswählen mussten, das ist es!",
+      "excluded_currencies_title": "Währung von automatisierten täglichen Auszahlungen ausgeschlossen",
+      "excluded_currencies_help": "Währung von automatisierten täglichen Auszahlungen ausgeschlossen",
+      "button": "Ändern",
+      "choose": "Währung wählen",
+      "auto_swap": "Auto-Swap auf bevorzugte Währung",
+      "flexibility_percentage": "Flexibilitätsprozentsatz",
+      "help": "Set underpaid payments to paid when amount is above this flexibility percentage"
+    },
+    "payment_urls": {
+      "confirm": "URL der Zahlungsbestätigung",
+      "fail": "URL für Zahlungsfehler",
+      "description": "Wir fügen zur Bestätigung der URL hinzu: ?CustomerReferenceNr = 1 & TransactionID = 1 & status = fehlgeschlagen | bezahlt & ConfirmCode = GeneratedUniqueCode"
+    },
+    "billing": {
+      "description": "Zu jeder eingehenden Transaktion wird eine Gebühr hinzugefügt. Die Lebensdauer der Mitglieder ist veraltet.",
+      "overview_confirmed_transactions": "Übersicht bestätigte Transaktionen"
+    },
+    "referrals": {
+      "description": "Ihre Empfehlungen werden automatisch registriert. Verwenden Sie Ihren persönlichen Verweislink https://cointopay.com/?r=[MerchantID] -, um mehr zu verdienen!"
+    }
+  },
+  "pos": {
+    "title": "POS",
+    "pos_manager": "POS-Manager",
+    "social_detail": "POS Social details",
+    "shipping_warning_msg": "Es sind keine Versandoptionen festgelegt und alle Länder sind für die Lieferung ausgewählt",
+    "menu": {
+      "products": "Produkte",
+      "tickets": "Tickets",
+      "receipts": "Quittungen",
+      "employees": "Angestellte",
+      "coupons": "Gutscheine",
+      "shipping": "Versand",
+      "office": "Backoffice"
+    },
+    "e_commerce": "E-Commerce",
+    "btn_enable": "E-Commerce aktivieren",
+    "btn_disable": "E-Commerce deaktivieren",
+    "btn_delete_all_products": "Löschen Sie alle Produkte",
+    "delete_catalog": "Katalog löschen",
+    "products": {
+      "title": "Produkt erstellen / aktualisieren",
+      "select_category": "Kategorie wählen",
+      "name": "Produktname",
+      "description": "Beschreibung",
+      "price": "Preis",
+      "sku": "Artikelnummer / EAN / Barcode / QR",
+      "quantity": "Lagerbestand",
+      "btn_add": "Produkt hinzufügen",
+      "btn_save": "speichern",
+      "tabs": {
+        "categories": "Kategorien",
+        "products": "Produkte",
+        "favourites": "Favoriten"
+      },
+      "favourites": {
+        "message": "Noch kein Lieblingsprodukt!"
+      },
+      "categories": {
+        "title": "Kategorie hinzufügen / aktualisieren",
+        "category_name": "Kategoriename",
+        "select_color": "Wähle Farbe",
+        "btn_save": "speichern",
+        "btn_add": "Kategorie hinzufügen"
+      },
+      "charge": {
+        "no_ticket": "Kein aktives Ticket",
+        "total_price": "Gesamtpreis",
+        "pay_with": "Bezahlen mit: ",
+        "btn_charge": "Aufladen",
+        "btn_delivery_charge": "Gebühr + Lieferung"
+      }
+    },
+    "cart": {
+      "available": "verfügbar",
+      "add_to_cart": "In den Warenkorb legen",
+      "update_cart": "Mehr hinzufügen",
+      "continue_shopping": "Mit dem Einkaufen fortfahren",
+      "checkout": "Auschecken",
+      "clear_cart": "Wagen löschen",
+      "empty_cart": "Dein Einkaufswagen ist leer"
+    },
+    "employees": {
+      "title": "POS",
+      "username": "Nutzername",
+      "password": "Passwort / PIN",
+      "pin": "PIN",
+      "btn_login": "Einloggen",
+      "btn_add": "Mitarbeiter hinzufügen",
+      "btn_save": "speichern"
+    },
+    "office": {
+      "product_catalog": "Produktkatalog",
+      "import": "Importieren",
+      "export": "Export",
+      "import_from_shopify": "..oder direkt aus shopify importieren",
+      "shopify_link": "Geben Sie den Shopify-Link ein",
+      "help": "Nur verifizierte Händler können Produkte im Shop-Bereich verfügbar machen!"
+    },
+    "tickets": {
+      "lbl_quantity": "Menge eingeben",
+      "stock_left": "Lager links:",
+      "product_price": "Produktpreis:",
+      "total_price": "Gesamtpreis:",
+      "btn_add": "Hinzufügen",
+      "add": "Ticket hinzufügen",
+      "name": "Ticketname",
+      "note": "Hinweis",
+      "btn_save": "speichern",
+      "add_product": "Produkt hinzufügen",
+      "back": "Zurück"
+    },
+    "invoice": {
+      "message": "QR-Code scannen oder dem Absender anzeigen",
+      "address": "Adresse",
+      "amount": "Menge",
+      "success": "Vielen Dank, Ihre Zahlung war erfolgreich. <br/> Transaktions-ID: #",
+      "failure": "Bezahlung fehlgeschlagen",
+      "merchant": "Händler",
+      "invoice_number": "Rechnung#"
+    },
+    "receipts": {
+      "title": "Kassenbon",
+      "email": "E-Mail Adresse eingeben",
+      "btn_send_receipt": "E-Mail-Quittung"
+    },
+    "success": "Bezahlung erfolgreich!",
+    "coupons": {
+      "headings": {
+        "coupon_code": "Gutscheincode",
+        "discount": "Rabatt",
+        "actions": "Aktionen"
+      },
+      "no_data": "Kein Gutschein verfügbar",
+      "btn_add": "Gutschein hinzufügen",
+      "list_title": "E-Commerce-Gutscheine",
+      "title": "Coupon",
+      "coupon_code": "Gutscheincode",
+      "discount": "Rabatt",
+      "btn_save": "speichern"
+    },
+    "shipping": {
+      "title": "E-Commerce-Lieferoptionen",
+      "btn_add": "Versandoption hinzufügen",
+      "country": "Land",
+      "shipping_method": "Versandart",
+      "shipping_cost": "Versandkosten",
+      "btn_save": "speichern",
+      "no_data": "Kein Versand möglich",
+      "headings": {
+        "country": "Land",
+        "shipping_method": "Versandart",
+        "shipping_cost": "Versandkosten",
+        "actions": "Aktionen"
+      }
+    }
+  },
+  "shop": {
+    "locale": "Gebietsschema",
+    "checkout": {
+      "title": "Auschecken",
+      "billing": "Rechnungsadresse",
+      "billing_first_name": "Vorname",
+      "billing_last_name": "Familienname, Nachname",
+      "organization": "Organisation",
+      "billing_phone": "Telefon",
+      "billing_email": "E-Mail-Addresse",
+      "billing_skype": "Skype",
+      "billing_address": "Adresse",
+      "billing_postal_code": "Postleitzahl",
+      "billing_city": "Stadt / Gemeinde",
+      "billing_state": "Staat / Provinz",
+      "billing_country": "Land",
+      "shipping": "Lieferanschrift",
+      "shipping_first_name": "Vorname",
+      "shipping_last_name": "Familienname, Nachname",
+      "shipping_phone": "Telefon",
+      "shipping_email": "E-Mail-Addresse",
+      "shipping_skype": "Skype",
+      "shipping_address": "Adresse",
+      "shipping_postal_code": "Postleitzahl",
+      "shipping_city": "Stadt / Gemeinde",
+      "shipping_state": "Staat / Provinz",
+      "shipping_country": "Land",
+      "select_currency": "Währung wählen",
+      "process": "Warenkorbzahlung verarbeiten",
+      "different_from_billing": "Anders als bei der Abrechnung",
+      "shipping_cost": "Versandkosten",
+      "cart": {
+        "title": "Warenkorb Zusammenfassung",
+        "sub_total": "Zwischensumme",
+        "shipping_cost": "Versandkosten",
+        "discount": "Rabatt",
+        "total": "Gesamt",
+        "btn_apply": "Anwenden",
+        "payment": "Zahlung"
+      }
+    }
+  },
+  "about": {
+    "title": "Über Cointopay",
+    "description": "Cointopay ist ein Startup-Unternehmen mit Sitz in Haarlem, Niederlande, das 2014 offiziell mit der Entwicklungszeit im Jahr 2013 begonnen wurde. Das Team besteht aus einem Entwickler, einem Manager und einem Administrator. Unser Haupttreiber ist die Bereitstellung innovativer Internet-Zahlungsdienste auf der Basis von neue Crypto Coins, auch in den Medien als BitCoin bekannt: Wir sind ein legitimes Unternehmen, das den Dollar / Euro nicht politisch abgewertet hat, wir glauben jedoch, dass eine Alternative zur einheimischen Zahlungsmethode den Wettbewerb ankurbeln und letztendlich für die Allgemeinheit vorteilhaft sein wird public. Cointopay ist ein Crypto-Coin-Payment-Dienstleister für Unternehmen und Wohltätigkeitsorganisationen. Wir sehen die Zukunft von Finanztransaktionen für alternative Währungen wie BitCoin zu sehr niedrigen Gebühren, sicher, sofort und sehr einfach, und wir möchten an diesem Übergang teilnehmen."
+  },
+  "login": {
+    "title": "Login",
+    "username": "Benutzername",
+    "password": "Passwort",
+    "twofa": "Google 2FA optional",
+    "button": "Login",
+    "forgot": "Passwort vergessen?",
+    "recover": "Passwort wiederherstellen"
+  },
+  "signup": {
+    "title": "Registrieren",
+    "username": "Benutzername",
+    "password": "Passwort",
+    "twofa": "Google 2FA optional",
+    "email": "Email",
+    "wallets": "Aktive Brieftaschenwährungen auswählen",
+    "wallet_button": "Währungen wählen",
+    "locale": "Sprache",
+    "button": "Anmelden"
+  },
+  "invoice": {
+    "title": "Generierte Rechnung",
+    "invoice_url": "Rechnungs-URL",
+    "warning": "Gelieve niet te betalen op dit factuuradres buiten dit betalingsvenster!",
+    "address": "Adresse",
+    "merchant": "Händler",
+    "currency": "Währung",
+    "amount": "Betrag",
+    "fee": "Gebühr enthalten",
+    "transaction_id": "Transaktions-ID",
+    "expiry": "Ablauf",
+    "reference": "Kundenreferenz",
+    "created_on": "Erstellt am",
+    "crypto": "CRYPTO",
+    "address_only": "KRYPTO-ADRESSE",
+    "full_crypto_link": "CRYPTO LINK",
+    "tzero": "INSTANT",
+    "fiat": "FIAT/Card",
+    "invoice": "Rechnung",
+    "coin": "Münze",
+    "status": "Status",
+    "created": "Erstellt",
+    "input_amount": "Input Amount",
+    "input_currency": "Eingabewährung",
+    "confirmed": "Bestätigt",
+    "expiry_on": "Expiry On",
+    "datetime": "Datetime",
+    "confirmed_message": "Bezahlung bestätigt",
+    "failed_message": "Bezahlung fehlgeschlagen",
+    "re_open": "Wieder öffnen",
+    "transaction_scheduled_for_revalidation": "Transaktion zur erneuten Validierung geplant",
+    "missing_amount": "Rechnung für Restzahlung erstellen",
+    "generate_invoice": "Rechnung erstellen",
+    "block_explorer": "Block erkunden",
+    "refund": "Rückerstattung, Rückzahlung",
+    "help_title": "Hilfe",
+    "pay_with_different_currency": "Bezahlen Sie mit einer anderen Währung",
+    "add": "Hinzufügen",
+    "forward_invoice": "Rechnung weiterleiten",
+    "cart_status": "Bestellstatus",
+    "delivery_address": "Lieferadresse",
+    "order_information": "Bestellinformationen",
+    "view_address": "Adresse anzeigen",
+    "view_order": "Bestellung anzeigen",
+    "shipping_cost": "Versandkosten",
+    "discount": "Rabatt",
+    "fiat_options": "Fiat Optionen"
+  },
+  "misc": {
+    "services": "Dienstleistungen",
+    "social": "Sozial",
+    "company": "Unternehmen"
+  },
+  "address_book": {
+    "title": "Adressbuch",
+    "address": "Adresse",
+    "tag": "Memo/Message/Tag",
+    "description": "Beschreibung",
+    "currency": "Currency",
+    "new": "Neue Adresse",
+    "save": "sparen",
+    "edit": "Bearbeiten",
+    "delete": "löschen",
+    "select": "Wählen",
+    "select_default": "Als Standard auswählen",
+    "remove_default": "Als Standard entfernen",
+    "actions": "Aktionen"
+  },
+  "newsletter": {
+    "title": "Abonnieren / Abmelden",
+    "email": "E-Mail-Addresse",
+    "subscribe": "Abonnieren",
+    "un_subscribe": "Abmelden"
+  },
+  "ratings": {
+    "author": "Full Name",
+    "email": "Email address",
+    "title": "Title",
+    "comment": "Review",
+    "btn_rate": "Rate!"
+  },
+  "errors": {
+    "required": "Required",
+    "invalid_url": "Invalid Url",
+    "invalid_email": "Invalid email address",
+    "no_match": "Passwords do not match",
+    "invalid_date": "Invalid date, format",
+    "invalid_decimal": "Amount value invalid, format",
+    "min": "Min value allowed ",
+    "invalid_password_criteria": "Please check the password criteria",
+    "invalid_phone": "Invalid phone number, format",
+    "min_len": "Min length ",
+    "max_len": "Max length ",
+    "numeric": "Please provide a valid numeric value",
+    "invalid_format": "Invalid format"
+  }
+}

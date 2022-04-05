@@ -1,0 +1,692 @@
+{
+  "menu": {
+    "news": "Nieuws",
+    "wallet": "Portemonnee",
+    "account": "Rekening",
+    "pos": "POS",
+    "shop": "Winkel",
+    "cart": "Winkelwagen",
+    "support": "Support",
+    "about": "Over",
+    "login_signup": "Inloggen / Lid Worden",
+    "logout": "Uitloggen"
+  },
+  "dashboard": {
+    "title": "Portemonnee overzicht",
+    "overview": "Wallet-overzicht",
+    "total": "Balans van de Portemonnee",
+    "metrics": "Belangrijke metriek",
+    "waiting": "Wachten",
+    "paid": "Betaald",
+    "expired": "Verlopen",
+    "webshop": "Webshop overzicht",
+    "transactions_per_day": "Betalingen per dag",
+    "revenue_per_day": "Omzet per day",
+    "transactions_per_coin": "Transacties per munt",
+    "transactions": "Transacties",
+    "report_incoming": "Rapportage IN",
+    "report_outgoing": "Rapportage UIT",
+    "chart_market_title": "Markt Grafiek",
+    "actions": "Portemonnee acties",
+    "send": "Versturen",
+    "send_description": "Versturen van cryptografische valuta naar een ander persoon, dat is wat u met deze functionaliteit kunt doen. U zult het adres en het bedrag moeten weten om van deze functionaliteit gebruik te maken.",
+    "receive": "Ontvangen",
+    "receive_description": "Ontvang modern valuta binnen uw rekening. Geef het adres of QR code aan de persoon die het bedrag naar u zal versturen.",
+    "ltr": "Adres",
+    "ltr_description": "Een LTR adres zal een jaar lang open blijven staan, u kan meerdere betalingen op hetzelfde adres ontvangen. U kunt het adres ten alle tijden consolideren, dit zodat u het bedrag verder kunt behandelen zoals u dat graag wil.",
+    "swap": "Omzetten",
+    "swap_description": "Omzetten van de ene valuta naar de andere, bedenk wel dat niet alle valuta geaccepteerd worden bij een omzetting.",
+    "vtoken": "vTokens",
+    "vtoken_description": "Maak vTokens aan, het is een representatie van waarde. Makkelijk om aan te maken en weg te geven en natuurlijk te ontvangen.",
+    "buy": "Kopen",
+    "buy_description": "Koop nu modern valuta gelijk vanuit uw rekening, zeer makkelijk en effectief via bank overschrijving en iDEAL.",
+    "payout": "Uitbetalen",
+    "payout_description": "Uitbetalingsmogelijkheden zoals bijvoorbeeld uitbetalen via Paypal en naar uw bankrekening via de EURO.",
+    "trade": "Handel",
+    "trade_description": "Handel met uw crypto-saldo op onze interne beurs genaamd reflextrader.com",
+    "help": "Directe acties",
+    "update_cart_status": "Orderstatus bijwerken",
+    "btn_update_cart_status": "Status bijwerken",
+    "warning_message": "Vul de KYC / AML-formuliervelden in uw account [HERE] in. U kunt geen crypto ontvangen en / of kopen totdat uw informatie is geverifieerd door ons compliance-team. Bedankt voor uw begrip."
+  },
+  "send": {
+    "title": "Versturen",
+    "amount": "Bedrag",
+    "coin_address": "Munt adres",
+    "scan": "Scan",
+    "upload": "Upload",
+    "button": "Versturen",
+    "address_book": "Adresboek",
+    "modals": {
+      "pin": {
+        "desc": "Immettere il PIN [PIN] per confermare il pagamento istantaneo TZERO. <br/> [AMOUNT] verrà inviato!"
+      }
+    }
+  },
+  "receive": {
+    "title": "Ontvangen",
+    "button": "Ontvangen",
+    "input_currency": "Input valuta",
+    "amount": "Bedrag",
+    "output_currency": "Output valuta",
+    "reference": "Uw referentie",
+    "email": "Verzenden als factuur per post",
+    "schedule": "Schema als factuur",
+    "schedule_dropdown": "Selecteer schema"
+  },
+  "buy": {
+    "title": "Kopen",
+    "button": "Kopen",
+    "input_currency": "Input valuta",
+    "amount": "Bedrag"
+  },
+  "ltr": {
+    "title": "LTR",
+    "load_long_term_addresses": "Load long term addresses",
+    "create": "Create",
+    "consolidate": "Consolidate"
+  },
+  "swap": {
+    "title": "Omzetten",
+    "swap_to": "Omzetten naar",
+    "button": "Omzetten",
+    "amount": "Bedrag"
+  },
+  "vtoken": {
+    "title": "vToken",
+    "button_create": "Create vToken",
+    "button_claim": "Claim vToken",
+    "amount": "Bedrag",
+    "token": "Token"
+  },
+  "payout": {
+    "title": "Uitbetalen",
+    "amount": "Input bedrag",
+    "button": "Uitbetalen",
+    "address_book": "Adresboek",
+    "remove": "Verwijderen",
+    "message": "DEFAULT: op rekening gebaseerde uitbetaling"
+  },
+  "home": {
+    "alert": "Systeem bericht",
+    "slogan": "Moderne cryptografische betalingsmethoden",
+    "sub_slogan": "Modern bankieren, handelen, webshop integratie en Directe Verkoop",
+    "signup": "Word Lid",
+    "auth_message": "Hi [USERNAME], druk hier om naar",
+    "your_dashboard": "uw dashboard",
+    "transaction": {
+      "slogan": "Maak een gratis account aan",
+      "email": "E-mail",
+      "password": "Wachtwoord",
+      "input_currency": "Input valuta",
+      "amount": "Bedrag",
+      "output_currency": "Output valuta",
+      "try_it_for_free": "Probeer Gratis"
+    },
+    "plugins": {
+      "slogan": "Webshop plugins met crypto ondersteuning",
+      "learn_more": "Vertel Meer",
+      "sliders": {
+        "magento": {
+          "description": "Download de Magento plugin van Github.com/Cointopay",
+          "image": "https://s3-eu-west-1.amazonaws.com/cointopay/pics/Magento.png",
+          "link": "https://github.com/Cointopay?q=magento"
+        },
+        "prestashop": {
+          "description": "Download de Prestashop plugin van Github.com/Cointopay",
+          "image": "https://s3-eu-west-1.amazonaws.com/cointopay/pics/prestashop.png",
+          "link": "https://github.com/Cointopay?q=presta"
+        },
+        "ecwid": {
+          "description": "Install de ECWID plugin van ecwid apps",
+          "image": "https://s3-eu-west-1.amazonaws.com/cointopay/pics/ecwid.png",
+          "link": "https://www.ecwid.com/apps/"
+        },
+        "woocommerce": {
+          "description": "Download de Woocommerce plugin van Github.com/Cointopay",
+          "image": "https://s3-eu-west-1.amazonaws.com/cointopay/pics/woocommerce.png",
+          "link": "https://github.com/Cointopay?q=wordpress"
+        },
+        "opencart": {
+          "description": "Download de Opencart plugin van Github.com/Cointopay",
+          "image": "https://s3-eu-west-1.amazonaws.com/cointopay/pics/opencart.png",
+          "link": "https://github.com/Cointopay?q=opencart"
+        },
+        "whmcs": {
+          "description": "Download de WHMCS plugin van Github.com/Cointopay",
+          "image": "https://s3-eu-west-1.amazonaws.com/cointopay/pics/whmcs.jpg",
+          "link": "https://github.com/Cointopay?q=whmcs"
+        },
+        "shopify": {
+          "description": "Get de Shopify indirect integration youtube video",
+          "image": "https://s3-eu-west-1.amazonaws.com/cointopay/pics/shopify.png",
+          "link": "https://www.youtube.com/watch?v=eM_dYQKCqlI"
+        },
+        "gambio": {
+          "description": "Download de gambio-plug-in op Github.com/Cointopay",
+          "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTsOnMS-KmfgGeRVZJNRkMwkAAiT949z4V87Q&usqp=CAU",
+          "link": "https://github.com/Cointopay/Gambio"
+        },
+        "box_billing": {
+          "description": "Download de boxbilling plugin van Github.com/Cointopay",
+          "image": "https://s3-eu-west-1.amazonaws.com/cointopay/pics/boxbilling.jpg",
+          "link": "https://github.com/Cointopay?q=box"
+        },
+        "tomatocart": {
+          "description": "Download de Tomatocart plugin van Github.com/Cointopay",
+          "image": "https://s3-eu-west-1.amazonaws.com/cointopay/pics/tomatocart.png",
+          "link": "https://github.com/Cointopay?q=tomato"
+        },
+        "odoo": {
+          "description": "Download de Odoo plugin van Github.com/Cointopay",
+          "image": "https://s3-eu-west-1.amazonaws.com/cointopay/pics/odoo.png",
+          "link": "https://github.com/Cointopay?q=odoo"
+        },
+        "wordpressecommerce": {
+          "description": "Download de Wordpress ecommerce plugin van Github.com/Cointopay",
+          "image": "https://s3-eu-west-1.amazonaws.com/cointopay/pics/wordpressecommerce.jpg",
+          "link": "https://github.com/Cointopay?q=wordpress"
+        },
+        "blesta": {
+          "description": "Download de Blesta plugin van Github.com/Cointopay",
+          "image": "https://s3-eu-west-1.amazonaws.com/cointopay/pics/blesta.png",
+          "link": "https://github.com/Cointopay?q=blesta"
+        },
+        "easydigitaldownloads": {
+          "description": "Download de WP Easy Digital Downloads plugin van Github.com/Cointopay",
+          "image": "https://s3-eu-west-1.amazonaws.com/cointopay/pics/easydigitaldownloads.png",
+          "link": "https://github.com/Cointopay?q=easy"
+        },
+        "ubercart": {
+          "description": "Download de Ubercart plugin van Github.com/Cointopay",
+          "image": "https://s3-eu-west-1.amazonaws.com/cointopay/pics/ubercart.png",
+          "link": "https://github.com/Cointopay?q=uber"
+        },
+        "cscart": {
+          "description": "Download de CS-Cart plugin van Github.com/Cointopay",
+          "image": "https://s3-eu-west-1.amazonaws.com/cointopay/pics/cscart.png",
+          "link": "https://github.com/Cointopay?q=cs-cart"
+        },
+        "joomlavirtuemart": {
+          "description": "Download de Joomla plugin van Github.com/Cointopay",
+          "image": "https://s3-eu-west-1.amazonaws.com/cointopay/pics/joomla.png",
+          "link": "https://github.com/Cointopay?q=joomla"
+        },
+        "zencart": {
+          "description": "Download de Zencart plugin van Github.com/Cointopay",
+          "image": "https://s3-eu-west-1.amazonaws.com/cointopay/pics/zencart.png",
+          "link": "https://github.com/Cointopay?q=zencart"
+        },
+        "oscommerce": {
+          "description": "Download de OSCommerce plugin van Github.com/Cointopay",
+          "image": "https://s3-eu-west-1.amazonaws.com/cointopay/pics/oscommerce.png",
+          "link": "https://github.com/Cointopay?q=oscommerce"
+        },
+        "drupalcommerce": {
+          "description": "Download de Drupal Commerce plugin van Github.com/Cointopay",
+          "image": "https://s3-eu-west-1.amazonaws.com/cointopay/pics/drupalcommerce.png",
+          "link": "https://github.com/Cointopay?q=drupal"
+        },
+        "xcart": {
+          "description": "Download de X-Cart plugin van Github.com/Cointopay",
+          "image": "https://s3-eu-west-1.amazonaws.com/cointopay/pics/xcart.png",
+          "link": "https://github.com/Cointopay?q=x-cart"
+        },
+        "membershippro": {
+          "description": "Download de Membership pro plugin van Github.com/Cointopay",
+          "image": "https://s3-eu-west-1.amazonaws.com/cointopay/pics/membershippro.jpg",
+          "link": "https://github.com/Cointopay?q=membership"
+        },
+        "arastta": {
+          "description": "Download de Arastta plugin van Github.com/Cointopay",
+          "image": "https://s3-eu-west-1.amazonaws.com/cointopay/pics/arastta.png",
+          "link": "https://github.com/Cointopay?q=aras"
+        }
+      }
+    },
+    "services": {
+      "slogan": "Jouw voordeel bij Cointopay",
+      "text": {
+        "1": "Volledig functionele portemonnee",
+        "2": "De beste valuta koersen",
+        "3": "Meerdere muntsoorten aanwezig",
+        "4": "Echte tijd balans",
+        "5": "<a href=\"https://cointopay.freshdesk.com/support/solutions\">API-documentatie / ondersteuning</a>",
+        "6": "Data bij rust encryptie",
+        "7": "en meer.."
+      }
+    },
+    "apps": {
+      "wallet": {
+        "title": "Download de Wallet app",
+        "description": "Beheer uw Cointopay portemonnee en handel zonder kosten op je telefoon."
+      },
+      "pos": {
+        "title": "Download de POS app",
+        "description": "Met de Cointopay POS app kan je je producten en verkoop direct beheren."
+      },
+      "tipping": {
+        "title": "Download de tipping app",
+        "description": "Tippr.today de globale tip standaard, nu beschikbaar op uw telefoon."
+      }
+    }
+  },
+  "news": {
+    "title": "Latest Cointopay & crypto currency news",
+    "add": "Add news",
+    "button": "Save"
+  },
+  "account": {
+    "overview": "Account overzicht",
+    "button_update": "Update",
+    "session_expired": "Sessie verlopen",
+    "expiry_msg": "Om privacyredenen kunt u dit gedeelte niet openen zonder een geldige sessie, wilt u opnieuw inloggen?",
+    "btn_manage_pos": "POS Manager",
+    "email_notifications": "E-mail notificaties",
+    "menu": {
+      "details": "Account details",
+      "payout": "Uitbetalingsdetails",
+      "kyc": "KYC/AML",
+      "shopping": "Winkelwagen",
+      "wallet": "Portemonnee valuta",
+      "payments": "BetalingsURLs",
+      "billing": "Kosten",
+      "pos": "Point of Sale(POS)",
+      "referrals": "Aangedragen personen"
+    },
+    "details": {
+      "verification": "Account verificatie",
+      "verified": "Geverifieerd - onderdeel van de audit cyclus",
+      "un_verified": "Ongeverifieerd account - vul uw details in",
+      "id": "Koopman account-ID",
+      "api": "Uw API key",
+      "security_code": "Security code",
+      "organization": "Organizatie",
+      "username": "Naam",
+      "password": "Wachtwoord",
+      "email": "E-mail",
+      "twofa": {
+        "auth": "Google Auth (2FA)",
+        "reset": "Reset 2FA Code",
+        "test": "Click om 2FA te testen",
+        "warning": "Alleen aanzetten als de nummers hetzelfde zijn",
+        "on_off": "2FA Aan/uit"
+      },
+      "locale": "Locale"
+    },
+    "payout": {
+      "payout": "Uitbetalen",
+      "option": "Paypal, Payeer",
+      "bank": "Uitbetaling bank",
+      "bank_name": "Naam van de bank rekening",
+      "iban": "IBAN/Bank rekening",
+      "bank_bic": "BIC/SWIFT Code",
+      "address_book": "Bank adresboek",
+      "crypto_address_book": "Crypto-adresboek",
+      "payout_message": "Scegli Paga come opzione per automatizzare i pagamenti di tipo banca / fiat e criptovaluta. Scegli Keep per interrompere il pagamento automatico. In qualsiasi momento puoi scegliere un pagamento bancario / fiat Ad-hoc premendo il pulsante PAY OUT all'interno della sezione wallet. Il pulsante INVIA all'interno della sezione portafoglio viene utilizzato per inviare criptovalute (Ad-hoc) tramite blockchain.",
+      "bank_verification_message": "Om uit te betalen aan uw bank, controleren wij of de (internationale) bankrekening van u is. Meestal gedaan door naamvergelijking. Als we twijfelen, vragen we u een klein bedrag en een bericht naar onze bank te sturen om te bewijzen dat het uw bankrekening is."
+    },
+    "kyc": {
+      "account_type": "Account Type",
+      "business_information": "Bedrijfsinformatie",
+      "beneficiary_information": "voordelige informatie",
+      "business_account": "Zakelijk of persoonlijk account",
+      "business_name": "Bedrijfsnaam",
+      "business_address": "Bedrijfsadres",
+      "business_postal_code": "Zakelijke postcode",
+      "business_city": "Bedrijfsstad",
+      "business_state": "Zakelijke provincie",
+      "business_country": "Bedrijfsland",
+      "first_name": "Voornaam begunstigde",
+      "last_name": "Achternaam begunstigde",
+      "full_name": "Begunstigde Persoonlijke volledige naam",
+      "birth_date": "Geboortedatum begunstigde",
+      "pep": "Bent u een politiek prominente persoon (PEP)?",
+      "bank_address": "Adres begunstigde",
+      "bank_postal_code": "Postcode begunstigde",
+      "bank_city": "Stad begunstigde",
+      "bank_state": "Provincie begunstigde",
+      "bank_country": "Land begunstigde",
+      "beneficiary_identity_information": "Identiteitsgegevens van de begunstigde",
+      "profile_image_help": "Een selfie van jou met het paspoort / foto-ID incl. datum en nick / gebruikersnaam",
+      "identity_type": "Identiteitstype",
+      "identity_number": "Identiteitskaartnummer",
+      "identity_country": "Land van uitgifte van identiteit",
+      "remove_account": "Verwijder account",
+      "income_source": "Inkomensbron",
+      "income_detail": "Detail"
+    },
+    "shopping_cart": {
+      "shopify_api": "API key",
+      "shopify_password": "Shopify wachtwoord",
+      "shopify_url": "Shopify URL",
+      "shopify_script": "Shopify script",
+      "ecwid": "ECWID Store ID"
+    },
+    "wallet": {
+      "active_title": "Actieve valuta",
+      "active_help": "Selecteer de crypto valuta die je actief wil gebruiken, het uitzetten van valuta betekent niet dat de balans verloren gaan. Het betekent slechts dat ze dan niet te zien zijn in verschillende secties van de site. Denk erom dat een klant niet kan betalen met een munt die uit provincie!",
+      "default_title": "Voorkeursvaluta",
+      "default_help": "Dit is jouw gewenste input currency voor diverse weergaven. Bijv. de Euro of de Dollar",
+      "preferred_title": "Voorkeursvaluta",
+      "preferred_help": "Uw favorite crypto valuta, als u er alleen eentje mocht uitkiezen, dat is alles wat dit betekent!",
+      "excluded_currencies_title": "Valuta uitgesloten van geautomatiseerde dagelijkse betalingen",
+      "excluded_currencies_help": "Valuta uitgesloten van geautomatiseerde dagelijkse betalingen",
+      "button": "Verandering",
+      "choose": "Selecteer valuta",
+      "auto_swap": "automatisch omwisselen naar gewenste valuta",
+      "flexibility_percentage": "Flexibiliteitspercentage",
+      "help": "Set underpaid payments to paid when amount is above this flexibility percentage"
+    },
+    "payment_urls": {
+      "confirm": "Betalingsbevestigings URL",
+      "fail": "Betalingsafwijzings URL",
+      "description": "We voegen toe aan de url: ?CustomerReferenceNr=1&TransactionID=1&status=failed|paid&ConfirmCode=GeneratedUniqueCode"
+    },
+    "billing": {
+      "description": "Een klein bedrag wordt aan iedere transactie toegevoegd. Levenslange leden en de doorbij behorende voordelen zijn uitgeschakeld.",
+      "overview_confirmed_transactions": "Overzicht bevestigde transacties"
+    },
+    "referrals": {
+      "description": "Uw door u aangebrachte leden zijn automatisch in uw account geactiveerd. Uw persoonlijke link https://cointopay.com/?r=[MerchantID] - kunt u gebruiken om meer te verdienen."
+    }
+  },
+  "pos": {
+    "title": "POS",
+    "pos_manager": "POS-manager",
+    "social_detail": "POS Social details",
+    "shipping_warning_msg": "Er zijn geen verzendopties ingesteld en alle landen zijn geselecteerd voor levering",
+    "menu": {
+      "products": "producten",
+      "tickets": "Kaartjes",
+      "receipts": "Receipts",
+      "employees": "werknemers",
+      "coupons": "Coupons",
+      "shipping": "Verzenden",
+      "office": "Back Office"
+    },
+    "e_commerce": "E-commerce",
+    "btn_enable": "Schakel e-commerce in",
+    "btn_disable": "Schakel e-commerce uit",
+    "btn_delete_all_products": "Verwijder alle producten",
+    "delete_catalog": "Catalogus verwijderen",
+    "products": {
+      "title": "Product maken / bijwerken",
+      "select_category": "selecteer categorie",
+      "name": "productnaam",
+      "description": "Beschrijving",
+      "price": "Prijs",
+      "sku": "SKU / EAN / Barcode / QR",
+      "quantity": "Voorraadniveau",
+      "btn_add": "Product toevoegen",
+      "btn_save": "Opslaan",
+      "tabs": {
+        "categories": "Categorieën",
+        "products": "producten",
+        "favourites": "favorieten"
+      },
+      "favourites": {
+        "message": "Nog geen favoriet product!"
+      },
+      "categories": {
+        "title": "Categorie toevoegen / bijwerken",
+        "category_name": "categorie naam",
+        "select_color": "Selecteer kleur",
+        "btn_save": "Opslaan",
+        "btn_add": "categorie toevoegen"
+      },
+      "charge": {
+        "no_ticket": "Geen actief ticket",
+        "total_price": "Totale prijs",
+        "pay_with": "Betaal met: ",
+        "btn_charge": "Berekenen",
+        "btn_delivery_charge": "Kosten + Levering"
+      }
+    },
+    "cart": {
+      "available": "beschikbaar",
+      "add_to_cart": "Voeg toe aan winkelkar",
+      "update_cart": "Voeg meer toe",
+      "continue_shopping": "Doorgaan met winkelen",
+      "checkout": "Uitchecken",
+      "clear_cart": "Winkelwagen wissen",
+      "empty_cart": "Uw winkelwagen is leeg"
+    },
+    "employees": {
+      "title": "POS",
+      "username": "Gebruikersnaam",
+      "password": "Wachtwoord / PIN",
+      "pin": "PIN",
+      "btn_login": "Log in",
+      "btn_add": "Werknemer toevoegen",
+      "btn_save": "Opslaan"
+    },
+    "office": {
+      "product_catalog": "Product catalogus",
+      "import": "Importeren",
+      "export": "Exporteren",
+      "import_from_shopify": "..or import directly from shopify",
+      "shopify_link": "Voer de Shopify-link in",
+      "help": "Alleen Verified Merchants kunnen producten tentoonstellen in het winkelgedeelte!"
+    },
+    "tickets": {
+      "lbl_quantity": "Voer hoeveelheid in",
+      "stock_left": "Voorraad over:",
+      "product_price": "Product prijs:",
+      "total_price": "Totale prijs:",
+      "btn_add": "Toevoegen",
+      "add": "Ticket toevoegen",
+      "name": "Ticketnaam",
+      "note": "Opmerking",
+      "btn_save": "Opslaan",
+      "add_product": "Product toevoegen",
+      "back": "Terug"
+    },
+    "invoice": {
+      "message": "Scan QR-code of toon aan afzender",
+      "address": "Adres",
+      "amount": "Bedrag",
+      "success": "Bedankt, uw betaling is gelukt. <br/> Transactie-ID: #",
+      "failure": "Betaling mislukt",
+      "merchant": "Handelaar",
+      "invoice_number": "Factuur#"
+    },
+    "receipts": {
+      "title": "Bon",
+      "email": "Vul email adres in",
+      "btn_send_receipt": "E-mail ontvangst"
+    },
+    "success": "Betaling geslaagd!",
+    "coupons": {
+      "headings": {
+        "coupon_code": "Coupon code",
+        "discount": "Korting",
+        "actions": "Acties"
+      },
+      "no_data": "Geen coupon beschikbaar",
+      "btn_add": "Coupon toevoegen",
+      "list_title": "E-commerce coupons",
+      "title": "Coupon",
+      "coupon_code": "Coupon code",
+      "discount": "Korting",
+      "btn_save": "Sparen"
+    },
+    "shipping": {
+      "title": "E-commerce bezorgopties",
+      "btn_add": "Verzendoptie toevoegen",
+      "country": "Land",
+      "shipping_method": "Verzendmethode",
+      "shipping_cost": "Transportkosten",
+      "btn_save": "Sparen",
+      "no_data": "Geen verzending mogelijk",
+      "headings": {
+        "country": "Land",
+        "shipping_method": "Verzendmethode",
+        "shipping_cost": "Transportkosten",
+        "actions": "Acties"
+      }
+    }
+  },
+  "shop": {
+    "locale": "Plaats",
+    "checkout": {
+      "title": "Uitchecken",
+      "billing": "Factuur adres",
+      "billing_first_name": "Voornaam",
+      "billing_last_name": "Achternaam",
+      "organization": "Organisatie",
+      "billing_phone": "Telefoon",
+      "billing_email": "E-mailadres",
+      "billing_skype": "Skype",
+      "billing_address": "Adres",
+      "billing_postal_code": "Postcode",
+      "billing_city": "Stad / plaats",
+      "billing_state": "Staat / provincie",
+      "billing_country": "Land",
+      "shipping": "Verzendingsadres",
+      "shipping_first_name": "Voornaam",
+      "shipping_last_name": "Achternaam",
+      "shipping_phone": "Telefoon",
+      "shipping_email": "E-mailadres",
+      "shipping_skype": "Skype",
+      "shipping_address": "Adres",
+      "shipping_postal_code": "Postcode",
+      "shipping_city": "Stad / plaats",
+      "shipping_state": "Staat / provincie",
+      "shipping_country": "Land",
+      "select_currency": "Selecteer valuta",
+      "process": "Betaling van winkelwagen verwerken",
+      "different_from_billing": "Anders dan facturering",
+      "shipping_cost": "Transportkosten",
+      "cart": {
+        "title": "Winkelwagenoverzicht",
+        "sub_total": "Subtotaal",
+        "shipping_cost": "Bezorgkosten",
+        "discount": "Korting",
+        "total": "Totaal",
+        "btn_apply": "Van toepassing zijn",
+        "payment": "Betaling"
+      }
+    }
+  },
+  "about": {
+    "title": "Over Cointopay",
+    "description": "Cointopay is een start-up gevestigd in Haarlem, Nederland, officieel gestart in 2014 met ontwikkelingstijd in 2013. Het team bestaat uit een ontwikkelaar, manager en beheerder. Onze belangrijkste drijfveer is om innovatieve internetbetalingsdiensten aan te bieden op basis van de nieuwe Crypto-munten, ook wel BitCoin in de media genoemd. Wij zijn een legitiem bedrijf en niet politiek gedreven om de Dollar / Euro te devalueren. We denken dat een alternatief voor de oorspronkelijke betaalmethode de concurrentie zal stimuleren en uiteindelijk voordelig zal zijn voor het grote publiek. Cointopay is een Crypto Coin Payment-serviceprovider voor bedrijven en liefdadigheidsorganisaties. We zien een toekomst van financi\u00eble transacties voor alternatieve valuta's zoals BitCoin tegen zeer lage kosten, veilig, direct en heel gemakkelijk en we willen deel uitmaken van die overgang."
+  },
+  "login": {
+    "title": "Login",
+    "username": "Gebruikersnaam",
+    "password": "Wachtwoord",
+    "twofa": "Google 2FA Optioneel",
+    "button": "Login",
+    "forgot": "Wachtwoord vergeten?",
+    "recover": "Wachtwoord achterhalen"
+  },
+  "signup": {
+    "title": "Registreren",
+    "username": "Gebruikersnaam",
+    "password": "Wachtwoord",
+    "twofa": "Google 2FA Optioneel",
+    "email": "E-mail",
+    "wallets": "Selecteer actieve moderne valuta",
+    "wallet_button": "Selecteer valuta",
+    "locale": "Language",
+    "button": "Registreren"
+  },
+  "invoice": {
+    "title": "Genereer Factuur",
+    "invoice_url": "Factuur-URL",
+    "warning": "Harap jangan membayar ke alamat faktur ini di luar jendela waktu pembayaran ini!",
+    "address": "Adres",
+    "merchant": "Handelaar",
+    "currency": "Valuta",
+    "amount": "Bedrag",
+    "fee": "Kosten inbegrepen",
+    "transaction_id": "Transactie ID",
+    "expiry": "Verstrijkingstijd",
+    "reference": "Klant referentie",
+    "created_on": "Gemaakt op",
+    "crypto": "CRYPTO",
+    "address_only": "CRYPTO-ADRES",
+    "full_crypto_link": "CRYPTO LINK",
+    "tzero": "INSTANT",
+    "fiat": "FIAT/Card",
+    "invoice": "Factuur",
+    "coin": "Munt",
+    "status": "Status",
+    "created": "Aangemaakt",
+    "input_amount": "Input bedrag",
+    "input_currency": "Input valuta",
+    "confirmed": "Bevestigd",
+    "expiry_on": "Verloopt op",
+    "datetime": "Datumtijd",
+    "confirmed_message": "Betaling bevestigd!",
+    "failed_message": "Betaling mislukt",
+    "re_open": "Heropenen",
+    "transaction_scheduled_for_revalidation": "Transactie gepland voor hervalidatie",
+    "missing_amount": "Genereer factuur voor resterende betaling",
+    "generate_invoice": "Factuur genereren",
+    "block_explorer": "Verken Block",
+    "refund": "Terugbetaling",
+    "help_title": "Helpen",
+    "pay_with_different_currency": "Betaal met verschillende valuta",
+    "add": "Toevoegen",
+    "forward_invoice": "Factuur doorsturen",
+    "cart_status": "Bestelstatus",
+    "delivery_address": "Bezorgadres",
+    "order_information": "Order informatie",
+    "view_address": "Adres bekijken",
+    "view_order": "Bestelling bekijken",
+    "shipping_cost": "Transportkosten",
+    "discount": "Korting",
+    "fiat_options": "Fiat-opties"
+  },
+  "misc": {
+    "services": "Diensten",
+    "social": "Social",
+    "company": "Bedrijf"
+  },
+  "address_book": {
+    "title": "Adresboek",
+    "address": "Adres",
+    "tag": "Memo/Message/Tag",
+    "description": "Omschrijving",
+    "currency": "Currency",
+    "new": "Nieuw adres",
+    "save": "Opslaan",
+    "edit": "Bewerk",
+    "delete": "verwijderen",
+    "select": "kiezen",
+    "select_default": "Selecteer als standaard",
+    "remove_default": "Standaard verwijderen",
+    "actions": "acties"
+  },
+  "newsletter": {
+    "title": "Abonneren / Afmelden",
+    "email": "E-mailadres",
+    "subscribe": "Abonneren",
+    "un_subscribe": "Afmelden"
+  },
+  "ratings": {
+    "author": "Voor-en achternaam",
+    "email": "E-mailadres",
+    "title": "Titel",
+    "comment": "Recensie",
+    "btn_rate": "Tarief"
+  },
+  "errors": {
+    "required": "Required",
+    "invalid_url": "Invalid Url",
+    "invalid_email": "Invalid email address",
+    "no_match": "Passwords do not match",
+    "invalid_date": "Invalid date, format",
+    "invalid_decimal": "Amount value invalid, format",
+    "min": "Min value allowed ",
+    "invalid_password_criteria": "Please check the password criteria",
+    "invalid_phone": "Invalid phone number, format",
+    "min_len": "Min length ",
+    "max_len": "Max length ",
+    "numeric": "Please provide a valid numeric value",
+    "invalid_format": "Invalid format"
+  }
+}

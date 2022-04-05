@@ -1,0 +1,818 @@
+<template>
+  <centered-layout>
+    <div class="grid grid-cols-3 gap-0 md:gap-4">
+      <div v-if="!loader && !invoice" class="col-span-3">
+        <img alt="" src="https://s3-eu-west-1.amazonaws.com/cointopay/pics/wojak.png" class="mx-auto" style="max-width: 100%"/>
+      </div>
+      <div class="col-span-3 md:col-span-2">
+        <template v-if="loader !== 'main' && invoice">
+          <div
+            class="text-sm md:text-base whitespace-nowrap mb-4 md:mb-0 scrollbar scrollbar-thin scrollbar-thumb-gray-400 scrollbar-track-gray-200 dark:scrollbar-track-gray-900 dark:scrollbar-thumb-gray-600">
+            <div class="flex items-center justify-between mb-4">
+              <div class="flex items-center">
+                    <div v-if="isSimpleView">
+                      <h2 class="font-semibold text-xl">{{ `${translate('invoice.invoice')} #${invoice.TransactionID}` }}</h2>
+                    </div>
+                    <div v-else>
+                      <h2 class="font-semibold text-xl"> {{ invoice.CoinName.toUpperCase() }}</h2> <img :src="generateIconUrl(invoice.CoinName)" alt="Image of this currency" class="w-fit h-fit ml-fit"/>
+                    </div>
+              </div>
+              <span class="cursor-pointer hover:text-blue-500" @click="isShowUrl = !isShowUrl">
+                <icon name="qr-code"></icon>
+              </span>
+            </div>
+            <div class="mb-4">
+              <div class="grid grid-cols-5 gap-0.5 md:gap-4">
+                <div class="col-span-5 md:col-span-2">{{ translate('invoice.merchant') }}</div>
+                <div class="col-span-5 md:col-span-3 font-semibold">{{ invoice.ShopTitle }}</div>
+              </div>
+              <div class="grid grid-cols-5 gap-0.5 md:gap-4">
+                <div class="col-span-5 md:col-span-2">{{ translate('invoice.amount') }}</div>
+                <div class="col-span-5 md:col-span-3 font-semibold">
+                  <div class="flex items-center">
+                    <div v-if="isSimpleView">
+                      {{ `${invoice.Amount} ${invoice.LongName}` }}
+                    </div>
+                    <div v-else>
+                      {{ `${invoice.Amount} ${invoice.LongName} ` }}
+                      <span class="inline-block mx-2">-</span>
+                      {{ ` ${invoice.OriginalAmount} ${inputCurrency}` }}
+                    </div>
+                    <j-button
+                      v-tippy="'Please pay the missing amount, once confirmed, click the recheck balance button. Thanks.'"
+                      v-if="!isWaiting && invoice.Reopenable === 1 && invoice.NotEnough === 1"
+                      :disabled="loader === 'reOpenInvoice'" class="ml-3" @click="reOpenInvoice()">
+                      <div v-if="loader === 'reOpenInvoice'" class="mr-3">
+                        <icon :name="'spinner'" classes="w-4 h-4 text-white"></icon>
+                      </div>
+                      <span>Recheck balance</span>
+                    </j-button>
+                  </div>
+                </div>
+              </div>
+              <div v-if="invoice.Status.toLowerCase() === 'underpaid'"
+                   class="text-red-500 grid grid-cols-5 gap-0.5 md:gap-4">
+                <div class="col-span-5 md:col-span-2">Missing amount</div>
+                <div class="col-span-5 md:col-span-3 font-semibold">
+                  {{ `${toFixed(invoice.InitialAmount - invoice.Amount)} ${inputCurrency}` }}
+                </div>
+              </div>
+              <template v-if="!isSimpleView" class="transform transition-transform">
+                <div class="grid grid-cols-5 gap-0.5 md:gap-4">
+                  <div class="col-span-5 md:col-span-2">{{ translate('invoice.fee') }}</div>
+                  <div class="col-span-5 md:col-span-3 font-semibold">
+                    <div class="flex items-center">
+                      <span>Service % + Fixed {{ invoice.MinerFee }} {{ invoice.LongName }}</span>
+                      <a class="ml-3" :href="termsLink" target="_blank">
+                        <icon name="question-mark" classes="w-5 h-5 text-yellow-500 dark:text-yellow-400"></icon>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <div class="grid grid-cols-5 gap-0.5 md:gap-4">
+                  <div class="col-span-5 md:col-span-2">Master Transaction ID</div>
+                  <div class="col-span-5 md:col-span-3 font-semibold">{{ invoice.MasterTransactionID }}</div>
+                </div>
+                <div class="grid grid-cols-5 gap-0.5 md:gap-4">
+                  <div class="col-span-5 md:col-span-2">{{ translate('invoice.transaction_id') }}</div>
+                  <div class="col-span-5 md:col-span-3 font-semibold">{{ invoice.TransactionID }}</div>
+                </div>
+                <div class="grid grid-cols-5 gap-0.5 md:gap-4">
+                  <div class="col-span-5 md:col-span-2">{{ translate('invoice.status') }}</div>
+                  <div class="col-span-5 md:col-span-3 font-semibold">{{ invoice.Status }}</div>
+                </div>
+              </template>
+              <div class="grid grid-cols-5 gap-0.5 md:gap-4">
+                <div class="col-span-5 md:col-span-2">{{ translate('invoice.reference') }}</div>
+                <div class="col-span-5 md:col-span-3 font-semibold">
+                  <div class="break-all whitespace-normal" v-html="invoice.CustomerReferenceNr"></div>
+                </div>
+              </div>
+              <template v-if="!isSimpleView">
+                <div v-if="reOpenable" class="grid grid-cols-5 gap-0.5 md:gap-4">
+                  <div class="col-span-5 md:col-span-2">{{ translate('invoice.address') }}</div>
+                  <div class="col-span-5 md:col-span-3 font-semibold">{{ invoice.coinAddress }}</div>
+                </div>
+                <div class="grid grid-cols-5 gap-0.5 md:gap-4">
+                  <div class="col-span-5 md:col-span-2">{{ translate('invoice.created_on') }}</div>
+                  <div class="col-span-5 md:col-span-3 font-semibold">{{ formatDT(invoice.CreatedOn) }}</div>
+                </div>
+              </template>
+              <div class="mt-4 flex items-center justify-center">
+                <span @click="isSimpleView = !isSimpleView"
+                      class="cursor-pointer mx-auto inline-block transform transition-transform"
+                      :class="{'rotate-180': !isSimpleView}">
+                  <icon name="chevron-double" classes="w-5 h-5"></icon>
+                </span>
+              </div>
+            </div>
+          </div>
+
+          <TabSet>
+            <!-- Crypto -->
+            <Tab v-if="isPaymentMethodAvailable('crypto')" :name="translate('invoice.crypto')"
+                 :selected="isFiat === null || isFiat === 0 || isOnlyPaymentMethod('crypto')">
+              <div class="text-center">
+                <div class="mb-4">
+                  <div class="flex items-center justify-center">
+                    <status-icon :invoice="invoice"></status-icon>
+                    <p class="text-2xl font-bold text-blue-500 text-center capitalize">
+                      {{ timer }}
+                    </p>
+                  </div>
+                  <a :href="invoice.RedirectTargetURL" v-if="isPaid || isExpired"
+                     class="mt-2 text-blue-500 hover:underline inline-flex items-center">
+                    <span class="mr-2">Click to Redirect</span>
+                    <icon name="arrow-right" classes="w-5 h-5"></icon>
+                  </a>
+                </div>
+                <div v-if="!isPaid && !isExpired">
+                  <QRCodeVue3 imgclass="mx-auto"
+                              :width="qrOptions.width"
+                              :height="qrOptions.height"
+                              :qr-options="qrOptions.qrOptions"
+                              :background-options="qrOptions.backgroundOptions"
+                              :dots-options="qrOptions.dotsOptions"
+                              :corners-dot-options="qrOptions.cornersDotOptions"
+                              :corners-square-options="qrOptions.cornersSquareOptions"
+                              :value="isCryptoLink ? invoice.CoinName.toLowerCase() + ':' + invoice.coinAddress + '?amount=' + invoice.Amount : invoice.coinAddress"></QRCodeVue3>
+                </div>
+                <div v-if="invoice.Tag" class="flex items-center justify-center mt-3">
+                  <span class="cursor-pointer text-red-500 mr-4 animate-pulse"
+                        v-tippy="'Please use this Memo/Tag otherwise you might risk losing your funds.'">
+                    <icon name="exclamation-circle"></icon>
+                  </span>
+                  <span>Memo/Tag: {{ invoice.Tag }}</span>
+                </div>
+                <div v-if="invoice.coinAddress !== 'none'" class="mt-4">
+                  <div class="flex flex-wrap justify-center items-stretch w-full mb-4 relative">
+                    <input type="text" v-model="invoice.coinAddress" readonly
+                           class="form-input flex-1 md:flex-none md:w-2/3 rounded-r-none"/>
+                    <div class="flex -mr-px">
+                      <span @click="copyToClipboard(decodeURIComponent(invoice.coinAddress))"
+                            class="hover:bg-gray-200 dark:hover:bg-gray-700 cursor-pointer flex items-center leading-normal rounded rounded-l-none border border-l-0 border-gray-300 dark:border-gray-600 px-3 whitespace-no-wrap text-sm">
+                        <icon name="clipboard" classes="w-5 h-5"></icon>
+                      </span>
+                    </div>
+                  </div>
+                </div>
+                <div class="flex items-center justify-center" v-if="!isPaid && !isExpired">
+                  <j-button class="mr-3" @click="isCryptoLink = !isCryptoLink">
+                    {{ isCryptoLink ? translate('invoice.full_crypto_link') : translate('invoice.address_only') }}
+                  </j-button>
+                  <j-button v-tippy="'Refresh'" :disabled="!isRefreshable" @click="refreshTransaction()">
+                    <icon name="refresh" classes="w-4 h-4"></icon>
+                  </j-button>
+                </div>
+                <a v-if="isExpired" class="text-blue-500 hover:underline"
+                   :href="renewTransaction()">Pay anyway? Click here</a>
+                <!-- Refund Invoice -->
+                <refund-invoice :invoice="invoice"></refund-invoice>
+              </div>
+            </Tab>
+            <!-- Instant -->
+            <Tab v-if="isPaymentMethodAvailable('instant')"
+                 :name="translate('invoice.tzero')" :selected="isOnlyPaymentMethod('instant')">
+              <div class="text-center">
+                <div class="mb-4">
+                  <div class="flex items-center justify-center">
+                    <status-icon :invoice="invoice"></status-icon>
+                    <p class="text-2xl font-bold text-blue-500 text-center capitalize">
+                      {{ timer }}</p>
+                  </div>
+                  <a :href="invoice.RedirectTargetURL" v-if="isPaid || isExpired"
+                     class="mt-2 text-blue-500 hover:underline inline-flex items-center">
+                    <span class="mr-2">Click to Redirect</span>
+                    <icon name="arrow-right" classes="w-5 h-5"></icon>
+                  </a>
+                </div>
+                <div class="mb-3" v-if="!isPaid && !isExpired">
+                  <QRCodeVue3 imgclass="mx-auto"
+                              :width="qrOptions.width"
+                              :height="qrOptions.height"
+                              :qr-options="qrOptions.qrOptions"
+                              :background-options="qrOptions.backgroundOptions"
+                              :dots-options="qrOptions.dotsOptions"
+                              :corners-dot-options="qrOptions.cornersDotOptions"
+                              :corners-square-options="qrOptions.cornersSquareOptions"
+                              :value="invoice.TZERO"></QRCodeVue3>
+                </div>
+                <a v-if="isExpired" class="text-blue-500 hover:underline"
+                   :href="renewTransaction()">Pay anyway? Click here</a>
+                <span v-if="isLoggedIn && isWaiting" class="mx-auto inline-block cursor-pointer" @click="payViaTZERO()">
+                  <img class="h-16" src='https://s3-eu-west-1.amazonaws.com/cointopay/img/cointopay_checkout.png'
+                       alt=""/>
+                </span>
+              </div>
+            </Tab>
+            <!-- Fiat -->
+            <Tab v-if="isPaymentMethodAvailable('fiat', isFiat)" :name="translate('invoice.fiat')"
+                 :selected="isFiat === 1 || isOnlyPaymentMethod('fiat')">
+              <div class="text-center">
+                <div class="mb-4">
+                  <div class="flex items-center justify-center">
+                    <status-icon :invoice="invoice"></status-icon>
+                    <p class="text-2xl font-bold text-blue-500 text-center capitalize">
+                      {{ timer }}</p>
+                  </div>
+                  <a :href="invoice.RedirectTargetURL" v-if="isPaid || isExpired"
+                     class="mt-2 text-blue-500 hover:underline inline-flex items-center">
+                    <span class="mr-2">Click to Redirect</span>
+                    <icon name="arrow-right" classes="w-5 h-5"></icon>
+                  </a>
+                </div>
+                <div v-if="!isPaid && !isExpired && invoice.PaymentDetail">
+                  <div class="content-center" v-html="invoice.PaymentDetail"></div>
+                </div>
+                <a v-if="isExpired" class="text-blue-500 hover:underline"
+                   :href="renewTransaction()">Pay anyway? Click here</a>
+              </div>
+            </Tab>
+          </TabSet>
+          <!-- Forward Invoice -->
+          <forward-invoice :invoice="invoice"></forward-invoice>
+          <div class="grid grid-cols-2 gap-0 md:gap-4">
+            <div class="col-span-2 md:col-span-1">
+              <!-- Pay with different currency -->
+              <div class="card"
+                   v-if="isActive && invoice.inputCurrency && invoice.LTR === 0 && (isFiat === null || isFiat === 0)">
+                <div class="text-center body">
+                  <j-button @click="launchPayWithOtherCurrencyModal()">
+                    {{ translate('invoice.pay_with_different_currency') }}
+                  </j-button>
+                </div>
+              </div>
+            </div>
+            <div class="col-span-2 md:col-span-1">
+              <div v-if="isWaiting" class="card">
+                <div class="body text-center">
+                  <a :href="generateCancelLink" class="btn btn-warning">Cancel</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </template>
+        <template v-if="loader === 'main'">
+          <pulse-skeleton></pulse-skeleton>
+          <pulse-skeleton></pulse-skeleton>
+        </template>
+      </div>
+
+      <div class="col-span-3 md:col-span-1" v-show="isShowUrl">
+        <template v-if="loader !== 'main'">
+          <div class="card">
+            <div class="title">
+              <div class="flex items-center justify-between">
+                <h5>{{ translate('invoice.invoice_url') }}</h5>
+                <span @click="isShowUrl = false" class="cursor-pointer">
+                  <icon name="close"></icon>
+                </span>
+              </div>
+            </div>
+            <hr class="border-gray-300 dark:border-gray-600"/>
+            <div class="body">
+              <div class="mb-4 flex items-center justify-between flex-col">
+                <QRCodeVue3 imgclass="mb-3"
+                            :width="qrOptions.width"
+                            :height="qrOptions.height"
+                            :qr-options="qrOptions.qrOptions"
+                            :background-options="qrOptions.backgroundOptions"
+                            :dots-options="qrOptions.dotsOptions"
+                            :corners-dot-options="qrOptions.cornersDotOptions"
+                            :corners-square-options="qrOptions.cornersSquareOptions"
+                            :value="invoiceUrl"></QRCodeVue3>
+                <div class="flex flex-wrap items-stretch w-full mb-4 relative">
+                  <input type="text" v-model="invoiceUrl" readonly class="form-input flex-1 rounded-r-none"/>
+                  <div class="flex -mr-px">
+                    <span @click="copyToClipboard(invoiceUrl)"
+                          class="hover:bg-gray-200 dark:hover:bg-gray-700 cursor-pointer flex items-center leading-normal rounded rounded-l-none border border-l-0 border-gray-300 dark:border-gray-600 px-3 whitespace-no-wrap text-sm">
+                      <icon name="clipboard" classes="w-5 h-5"></icon>
+                    </span>
+                  </div>
+                </div>
+                <p class="text-center text-red-500">{{ translate('invoice.warning') }}</p>
+              </div>
+            </div>
+          </div>
+        </template>
+        <template v-if="loader === 'main'">
+          <pulse-skeleton></pulse-skeleton>
+          <pulse-skeleton></pulse-skeleton>
+        </template>
+      </div>
+    </div>
+  </centered-layout>
+  <!-- Pay with different currency modal -->
+  <pay-with-different-currency-modal></pay-with-different-currency-modal>
+  <!-- Payment notification modal -->
+  <payment-notification-modal></payment-notification-modal>
+  <!-- Redirect Timer Modal -->
+  <redirect-timer-modal></redirect-timer-modal>
+</template>
+
+<script>
+import CenteredLayout from '@/components/layouts/CenteredLayout'
+import QRCodeVue3 from 'qrcode-vue3'
+import JButton from '@/templates/Button'
+import TabSet from '@/components/common/TabSet'
+import Tab from '@/components/common/Tab'
+import PulseSkeleton from '@/components/PulseSkeleton'
+import ForwardInvoice from '@/components/invoice/ForwardInvoice'
+import RefundInvoice from '@/components/invoice/RefundInvoice'
+import PayWithDifferentCurrencyModal from '@/components/invoice/modals/PayWithDifferentCurrencyModal'
+import PaymentNotificationModal from '@/components/invoice/modals/PaymentNotificationModal'
+import RedirectTimerModal from '@/components/invoice/modals/RedirectTimerModal'
+import Icon from '@/components/Icon'
+import StatusIcon from '@/components/invoice/StatusIcon'
+import { computed, inject, onBeforeMount, onBeforeUnmount, reactive, toRefs } from 'vue'
+import { useRoute, useRouter } from 'vue-router'
+import { useStore } from 'vuex'
+import { FETCH_TRANSLATIONS, SET_LOCALE } from '@/store/keys'
+import compositionUtils from '@/compositionUtils'
+import qrCodeOptions from '@/qrOptions'
+import * as _ from 'lodash'
+
+const moment = require('moment-timezone/builds/moment-timezone-with-data-2012-2022.min')
+
+export default {
+  name: 'Invoice',
+  components: {
+    CenteredLayout,
+    QRCodeVue3,
+    PulseSkeleton,
+    JButton,
+    TabSet,
+    Tab,
+    Icon,
+    ForwardInvoice,
+    RefundInvoice,
+    PayWithDifferentCurrencyModal,
+    PaymentNotificationModal,
+    RedirectTimerModal,
+    StatusIcon
+  },
+  setup () {
+    // Providers
+    const translate = inject('translate')
+    const http = inject('http')
+    const toast = inject('toast')
+    const swal = inject('swal')
+    const emitter = inject('emitter')
+
+    const route = useRoute()
+    const router = useRouter()
+    const store = useStore()
+
+    const {
+      generateIconUrl,
+      copyToClipboard,
+      formatDT,
+      saveNotification,
+      toFixed
+    } = compositionUtils()
+    const { qrOptions } = qrCodeOptions()
+    const apiBaseUrl = process.env.VUE_APP_API_URL
+
+    // State
+    const state = reactive({
+      lang: 'en',
+      isFiat: null,
+      coins: [],
+      termsLink: window.location.protocol + '//' + window.location.host + '/terms',
+      loader: '',
+      timer: null,
+      interval: null,
+      transactionInterval: null,
+      showRedirectTimer: false,
+      invoice: null,
+      invoiceUrl: window.location.href,
+      isSimpleView: true,
+      isCryptoLink: true,
+      isRefreshable: false,
+      transactionSocket: null,
+      isClosedTransactionsSocket: false,
+      balanceSocket: null,
+      isClosedBalanceSocket: false,
+      isShowUrl: false
+    })
+
+    // Computed
+    const inputCurrency = computed(() => {
+      let inputCurrency = ''
+      if (state.invoice) {
+        inputCurrency = state.invoice.inputCurrency
+        const coin = _.find(store.state.altCoins, { ShorName: inputCurrency })
+        if (coin) {
+          inputCurrency = coin.LongName
+        }
+      }
+      return inputCurrency
+    })
+    const altCoin = computed(() => {
+      return _.find(store.state.altCoins, {
+        ID: state.invoice.AltCoinID
+      })
+    })
+    const isWaiting = computed(() => {
+      return state.invoice && state.invoice.Status.toLowerCase() === 'waiting'
+    })
+    const isPaid = computed(() => {
+      return state.invoice && ['paid', 'underpaid'].indexOf(state.invoice.Status.toLowerCase()) !== -1
+    })
+    const isExpired = computed(() => {
+      return state.invoice && state.invoice.Status.toLowerCase() === 'expired'
+    })
+    const isActive = computed(() => {
+      return state.invoice && ['waiting', 'awaiting-fiat'].indexOf(state.invoice.Status.toLowerCase()) !== -1
+    })
+    const reOpenable = computed(() => {
+      return state.invoice && state.invoice.Status.toLowerCase() === 'underpaid' &&
+        state.invoice.Reopenable.toString() === '1'
+    })
+    const generateCancelLink = computed(() => {
+      return `${apiBaseUrl}/MerchantAPI?Confirm=true&CustomerReferenceNr=${state.invoice.CustomerReferenceNr}&TransactionID=${state.invoice.TransactionID}&MerchantID=${state.invoice.MerchantID}&coinAddress=${state.invoice.coinAddress}&AltCoinID=${state.invoice.AltCoinID}`
+    })
+    const theme = computed(() => store.state.mode)
+    const user = computed(() => store.state.user)
+    const isLoggedIn = computed(() => store.state.isLoggedIn)
+
+    // Methods
+    const fetchTransaction = (confirmCode, loader = 'main') => {
+      state.loader = loader
+      const payload = {
+        Call: 'Transactiondetail',
+        MerchantID: 1,
+        APIKey: '_',
+        ConfirmCode: confirmCode,
+        output: 'json'
+      }
+      http.get(`${apiBaseUrl}/v2REAPI`, {
+        params: payload
+      }).then(response => {
+        state.loader = ''
+        if (response.status === 200) {
+          if (response.data.result !== 'failed') {
+            state.invoice = response.data.data
+            const status = state.invoice.Status.toLowerCase()
+            state.isFiat = state.invoice.Buy === 1 || (state.isFiat === 1 ? 1 : 0)
+            if (['paid', 'underpaid', 'expired'].indexOf(status) !== -1) {
+              state.timer = state.invoice.Status
+              if (state.transactionInterval) {
+                clearInterval(state.transactionInterval)
+              }
+              if (state.interval) {
+                clearInterval(state.interval)
+                state.timer = status
+              }
+              if (status === 'paid' && state.showRedirectTimer) {
+                emitter.emit('paymentNotificationModal', {
+                  close: true
+                })
+                emitter.emit('redirectTimerModal', {
+                  invoice: state.invoice
+                })
+              }
+            }
+            if (['waiting', 'awaiting-fiat'].indexOf(status) !== -1) {
+              startTimer()
+            }
+            if (loader === 'main') {
+              fetchEnabledCoins(state.invoice.MerchantID)
+            }
+          }
+        }
+      }).catch(error => {
+        state.loader = ''
+        console.log(error)
+      })
+    }
+    const fetchInvoiceData = () => {
+      if (Object.keys(route.params).length > 0) {
+        const confirmCode = route.params.confirmCode
+        fetchTransaction(confirmCode)
+        if (state.transactionInterval) {
+          clearInterval(state.transactionInterval)
+        }
+        state.transactionInterval = setInterval(() => {
+          fetchTransaction(confirmCode, false)
+        }, 60000)
+      } else {
+        router.push('/')
+      }
+    }
+    // Start timer
+    const startTimer = () => {
+      if (!state.timer) {
+        const date = moment.tz(state.invoice.CreatedOn, 'Europe/Amsterdam')
+          .add(Number(state.invoice.ExpiryTime), 'minutes')
+        state.interval = setInterval(() => {
+          const now = moment().tz('Europe/Amsterdam').valueOf()
+          const diff = date.valueOf() - now
+          // Time calculations for days, hours, minutes and seconds
+          const days = Math.floor(diff / (1000 * 60 * 60 * 24))
+          const hours = Math.floor(
+            (diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+          )
+          const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60))
+          const seconds = Math.floor((diff % (1000 * 60)) / 1000)
+          state.timer = `${days}d ${hours}h ${minutes}m ${seconds}s`
+          if (diff < 0) {
+            clearInterval(state.interval)
+            state.timer = 'Expired'
+            fetchTransaction(state.invoice.ConfirmCode, '')
+          }
+        }, 1000)
+      }
+    }
+    // Fetch enabled coins
+    const fetchEnabledCoins = (merchantID) => {
+      const payload = {
+        MerchantID: merchantID,
+        output: 'json',
+        JsonArray: ''
+      }
+      http.get(`${apiBaseUrl}/CloneMasterTransaction`, {
+        params: payload
+      }).then(response => {
+        state.coins = response.data
+      }).catch(error => {
+        console.log(error)
+      })
+    }
+    // Refresh Transaction
+    const refreshTransaction = () => {
+      if (!state.isRefreshable) {
+        return
+      }
+      state.isRefreshable = false
+      http.get(`${apiBaseUrl}/v2REAPI`, {
+        params: {
+          Call: 'txcheckcall',
+          MerchantID: state.invoice.MerchantID,
+          APIKey: '_',
+          AltCoinID: state.invoice.AltCoinID,
+          TransactionID: state.invoice.TransactionID,
+          coinAddress: state.invoice.coinAddress,
+          output: 'json'
+        }
+      }).then(response => {
+        setTimeout(() => {
+          state.isRefreshable = true
+        }, 60000)
+        if (response.data && response.data.message) {
+          toast.success(response.data.message)
+        }
+      }).catch(error => {
+        console.log(error)
+      })
+    }
+    // Renew Transaction
+    const renewTransaction = () => {
+      let url = `https://cointopay.com/MerchantAPI?Checkout=true&MerchantID=${state.invoice.MerchantID}&Amount=${state.invoice.OriginalAmount}&AltCoinID=${state.invoice.AltCoinID}&CustomerReferenceNr=${state.invoice.CustomerReferenceNr}&SecurityCode=${state.invoice.SecurityCode}&inputCurrency=${state.invoice.inputCurrency}`
+      if (state.invoice.ConfirmURL) {
+        url += `&transactionconfirmurl=${state.invoice.ConfirmURL}`
+      }
+      if (state.invoice.FailURL) {
+        url += `&transactionfailurl=${state.invoice.FailURL}`
+      }
+      return url
+    }
+    // Reopen Invoice -- Transaction
+    const reOpenInvoice = () => {
+      state.loader = 'reOpenInvoice'
+      http.get(`${apiBaseUrl}/v2REAPI`, {
+        params: {
+          Call: 'ReopenNotEnough',
+          MerchantID: state.invoice.MerchantID,
+          APIKey: '_',
+          ConfirmCode: state.invoice.Security,
+          output: 'json'
+        }
+      }).then(response => {
+        state.loader = ''
+        if (response.data.status_code === 200) {
+          toast.success('Transaction scheduled for re-validation')
+          saveNotification('Transaction scheduled for re-validation')
+          fetchTransaction(state.invoice.Security, '')
+        } else {
+          toast.error(response.data.message)
+          saveNotification(response.data.message)
+        }
+      }).catch(error => {
+        state.loader = ''
+        console.log(error)
+      })
+    }
+    // Check payment options
+    const isOnlyPaymentMethod = (option) => {
+      const methods = state.invoice.PaymentOptions.split(',').filter(Boolean)
+      if (methods.length === 1 && state.isFiat !== 1) {
+        return methods.indexOf(option) !== -1
+      } else {
+        return methods.indexOf('crypto') === -1 ? option === 'instant' : false
+      }
+    }
+    // Check if payment method is available
+    const isPaymentMethodAvailable = (method, isFiat) => {
+      const methods = state.invoice.PaymentOptions.split(',').filter(Boolean)
+      return methods.indexOf(method) !== -1 || isFiat === 1
+    }
+    // Launch pay with different currency modal
+    const launchPayWithOtherCurrencyModal = () => {
+      emitter.emit('payWithDifferentCurrencyModal', {
+        coins: state.coins,
+        invoice: state.invoice
+      })
+    }
+    const payViaTZERO = () => {
+      swal.fire({
+        title: 'Pay Invoice',
+        text: 'Do you want to pay this invoice?',
+        icon: 'warning',
+        showCancelButton: true,
+        confirmButtonColor: '#d33',
+        confirmButtonText: 'Yes',
+        cancelButtonText: 'No',
+        focusCancel: true,
+        customClass: {
+          container: 'swal2-tailwind'
+        }
+      }).then(({ value }) => {
+        if (value && value === true) {
+          http.get(`${apiBaseUrl}/TminusZeroPaymentProcessor`, {
+            params: {
+              MerchantID: state.invoice.MerchantID,
+              AltCoinID: state.invoice.AltCoinID,
+              TransactionID: state.invoice.TransactionID,
+              CustomerReferenceNr: state.invoice.CustomerReferenceNr,
+              coinAddress: state.invoice.coinAddress,
+              apikey: user.value.APIKey,
+              output: 'json'
+            }
+          }).then(response => {
+            if (response.status === 200) {
+              toast.success(response.data)
+              saveNotification(response.data)
+            }
+          }).catch(error => {
+            if (error.data) {
+              toast.error(error.data)
+            }
+          })
+        }
+      })
+    }
+    // Balance notifications socket
+    const initBalanceSocket = () => {
+      state.balanceSocket = new WebSocket('wss://wss.cointopay.com/balance')
+      state.balanceSocket.onmessage = function (event) {
+        if (event && event.data) {
+          const parts = event.data.split(':')
+          if (parts.length >= 4 && state.invoice) {
+            if (state.invoice.TransactionID.toString() === parts[1].toString()) {
+              if (Object.keys(route.params).length > 0) {
+                const confirmCode = route.params.confirmCode
+                setTimeout(() => {
+                  fetchTransaction(confirmCode, '')
+                }, 2000)
+                if (parts[2].toLowerCase() === 'paid') {
+                  state.showRedirectTimer = true
+                }
+              }
+            }
+          } else if (parts.length === 3 && state.invoice) {
+            if (state.invoice.TransactionID.toString() === parts[1].toString()) {
+              setTimeout(() => {
+                fetchTransaction(state.invoice.Security, '')
+              }, 2000)
+            }
+          }
+        }
+      }
+      state.balanceSocket.onclose = function (event) {
+        if (!state.isClosedBalanceSocket) {
+          initBalanceSocket()
+        }
+      }
+    }
+    // Transaction notifications socket
+    const initTransactionSocket = () => {
+      state.transactionSocket = new WebSocket('wss://wss.cointopay.com/transactions')
+      state.transactionSocket.onmessage = function (event) {
+        if (event && event.data) {
+          const data = event.data
+          const parts = data.split(':')
+          if (parts.length >= 4 && state.invoice) {
+            if (state.invoice.TransactionID.toString() === parts[1].toString()) {
+              setTimeout(() => {
+                fetchTransaction(state.invoice.Security, '')
+              }, 2000)
+              if (parts[0].toLowerCase() === 'blockchain' && window.localStorage.getItem(parts[1]) === null) {
+                window.localStorage.setItem(parts[1], 'true')
+                const isFullPayment = parts[3].toLowerCase() === 'confirming'
+                const amount = !isFullPayment ? toFixed(Number.parseFloat(state.invoice.Amount) - Number.parseFloat(parts[2])) : 0
+                emitter.emit('paymentNotificationModal', {
+                  invoice: state.invoice,
+                  isFullPayment,
+                  amount
+                })
+              }
+            }
+          } else if (parts.length === 3 && state.invoice) {
+            if (state.invoice.TransactionID.toString() === parts[1].toString()) {
+              setTimeout(() => {
+                fetchTransaction(state.invoice.Security, '')
+              }, 2000)
+            }
+          }
+        }
+      }
+      state.transactionSocket.onclose = function (event) {
+        if (!state.isClosedTransactionsSocket) {
+          initTransactionSocket()
+        }
+      }
+    }
+
+    onBeforeMount(() => {
+      state.isRefreshable = true
+      if (Object.keys(route.query).length > 0) {
+        if (typeof route.query.lang !== 'undefined') {
+          state.lang = route.query.lang
+          // Change language
+          store.commit(SET_LOCALE, state.lang.toUpperCase())
+          store.dispatch(FETCH_TRANSLATIONS)
+        }
+        if (typeof route.query.fiat !== 'undefined') {
+          state.isFiat = Number(route.query.fiat)
+        }
+        if (route.query.t === true) {
+          this.isNotice = true
+        }
+      }
+      // Fetch Invoice Data
+      fetchInvoiceData()
+      // Init Transaction Socket
+      initTransactionSocket()
+      // Init Balance Socket
+      initBalanceSocket()
+    })
+
+    onBeforeUnmount(() => {
+      if (state.transactionInterval) {
+        clearInterval(state.transactionInterval)
+      }
+      if (state.interval) {
+        clearInterval(state.interval)
+      }
+      // Destroy Sockets
+      if (state.balanceSocket !== null) {
+        state.isClosedBalanceSocket = true
+        state.balanceSocket.close()
+      }
+      if (state.transactionSocket !== null) {
+        state.isClosedTransactionsSocket = true
+        state.transactionSocket.close()
+      }
+    })
+
+    return {
+      translate,
+      ...toRefs(state),
+      isLoggedIn,
+      generateIconUrl,
+      qrOptions,
+      copyToClipboard,
+      formatDT,
+      toFixed,
+      theme,
+      inputCurrency,
+      altCoin,
+      isWaiting,
+      isPaid,
+      isExpired,
+      isActive,
+      reOpenable,
+      generateCancelLink,
+      refreshTransaction,
+      renewTransaction,
+      reOpenInvoice,
+      isOnlyPaymentMethod,
+      isPaymentMethodAvailable,
+      launchPayWithOtherCurrencyModal,
+      payViaTZERO
+    }
+  }
+}
+</script>
+
+<style scoped lang="scss">
+.content-center {
+  :deep(a) {
+    @apply block;
+    img {
+      @apply mx-auto;
+    }
+  }
+}
+</style>

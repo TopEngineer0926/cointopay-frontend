@@ -1,0 +1,262 @@
+[
+  {
+    "id": "dim-dimcoin",
+    "symbol": "dim"
+  },
+  {
+    "id": "iflt-inflationcoin",
+    "symbol": "iflt"
+  },
+  {
+    "id": "btc-bitcoin",
+    "symbol": "btc"
+  },
+  {
+    "id": "ltc-litecoin",
+    "symbol": "ltc"
+  },
+  {
+    "id": "dash-dash",
+    "symbol": "dash"
+  },
+  {
+    "id": "doge-dogecoin",
+    "symbol": "doge"
+  },
+  {
+    "id": "blk-blackcoin",
+    "symbol": "blk"
+  },
+  {
+    "id": "html-htmlcoin",
+    "symbol": "html"
+  },
+  {
+    "id": "ftc-feathercoin",
+    "symbol": "ftc"
+  },
+  {
+    "id": "vrc-vericoin",
+    "symbol": "vrc"
+  },
+  {
+    "id": "nmc-namecoin",
+    "symbol": "nmc"
+  },
+  {
+    "id": "frc-freicoin",
+    "symbol": "frc"
+  },
+  {
+    "id": "grs-groestlcoin",
+    "symbol": "grs"
+  },
+  {
+    "id": "sys-syscoin",
+    "symbol": "sys"
+  },
+  {
+    "id": "ppc-peercoin",
+    "symbol": "ppc"
+  },
+  {
+    "id": "rdd-reddcoin",
+    "symbol": "rdd"
+  },
+  {
+    "id": "xvg-verge",
+    "symbol": "xvg"
+  },
+  {
+    "id": "ok-okcash",
+    "symbol": "ok"
+  },
+  {
+    "id": "nxt-nxt",
+    "symbol": "nxt"
+  },
+  {
+    "id": "xmr-monero",
+    "symbol": "xmr"
+  },
+  {
+    "id": "grc-gridcoin",
+    "symbol": "grc"
+  },
+  {
+    "id": "carbon-carboncoin",
+    "symbol": "carbon"
+  },
+  {
+    "id": "dgb-digibyte",
+    "symbol": "dgb"
+  },
+  {
+    "id": "fldc-foldingcoin",
+    "symbol": "fldc"
+  },
+  {
+    "id": "storj-storj",
+    "symbol": "storj"
+  },
+  {
+    "id": "eth-ethereum",
+    "symbol": "eth"
+  },
+  {
+    "id": "maid-maidsafecoin",
+    "symbol": "maid"
+  },
+  {
+    "id": "vtc-vertcoin",
+    "symbol": "vtc"
+  },
+  {
+    "id": "sc-siacoin",
+    "symbol": "sc"
+  },
+  {
+    "id": "bcn-bytecoin",
+    "symbol": "bcn"
+  },
+  {
+    "id": "xmy-myriad",
+    "symbol": "xmy"
+  },
+  {
+    "id": "burst-burst",
+    "symbol": "burst"
+  },
+  {
+    "id": "aby-artbyte",
+    "symbol": "aby"
+  },
+  {
+    "id": "exp-expanse",
+    "symbol": "exp"
+  },
+  {
+    "id": "lsk-lisk",
+    "symbol": "lsk"
+  },
+  {
+    "id": "moon-mooncoin",
+    "symbol": "moon"
+  },
+  {
+    "id": "emc-emercoin",
+    "symbol": "emc"
+  },
+  {
+    "id": "egc-evergreencoin",
+    "symbol": "egc"
+  },
+  {
+    "id": "pink-pinkcoin",
+    "symbol": "pink"
+  },
+  {
+    "id": "via-viacoin",
+    "symbol": "via"
+  },
+  {
+    "id": "pivx-pivx",
+    "symbol": "pivx"
+  },
+  {
+    "id": "dime-dimecoin",
+    "symbol": "dime"
+  },
+  {
+    "id": "mue-monetaryunit",
+    "symbol": "mue"
+  },
+  {
+    "id": "nyc-newyorkcoin",
+    "symbol": "nyc"
+  },
+  {
+    "id": "waves-waves",
+    "symbol": "waves"
+  },
+  {
+    "id": "etc-ethereum-classic",
+    "symbol": "etc"
+  },
+  {
+    "id": "zec-zcash",
+    "symbol": "zec"
+  },
+  {
+    "id": "ardr-ardor",
+    "symbol": "ardr"
+  },
+  {
+    "id": "rup-rupee",
+    "symbol": "rup"
+  },
+  {
+    "id": "gnt-golem",
+    "symbol": "gnt"
+  },
+  {
+    "id": "usdt-tether",
+    "symbol": "usdt"
+  },
+  {
+    "id": "bch-bitcoin-cash",
+    "symbol": "bch"
+  },
+  {
+    "id": "zen-horizen",
+    "symbol": "zen"
+  },
+  {
+    "id": "xzc-zcoin",
+    "symbol": "xzc"
+  },
+  {
+    "id": "btg-bitcoin-gold",
+    "symbol": "btg"
+  },
+  {
+    "id": "ada-cardano",
+    "symbol": "ada"
+  },
+  {
+    "id": "trx-tron",
+    "symbol": "trx"
+  },
+  {
+    "id": "icx-icon",
+    "symbol": "icx"
+  },
+  {
+    "id": "music-musicoin",
+    "symbol": "music"
+  },
+  {
+    "id": "urals-uralscoin",
+    "symbol": "urals"
+  },
+  {
+    "id": "cash-cashcoin",
+    "symbol": "cash"
+  },
+  {
+    "id": "btx-bitcore",
+    "symbol": "btx"
+  },
+  {
+    "id": "btt-bittorrent",
+    "symbol": "btt"
+  },
+  {
+    "id": "veil-veil",
+    "symbol": "veil"
+  },
+  {
+    "id": "vet-vechain",
+    "symbol": "vet"
+  }
+]

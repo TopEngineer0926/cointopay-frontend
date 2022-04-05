@@ -1,0 +1,692 @@
+{
+  "menu": {
+    "news": "新闻",
+    "wallet": "钱包",
+    "account": "账户",
+    "pos": "POS",
+    "shop": "商店",
+    "cart": "购物车",
+    "support": "帮助",
+    "about": "关于",
+    "login_signup": "登录 / 注册",
+    "logout": "退出"
+  },
+  "dashboard": {
+    "title": "钱包面板",
+    "overview": "錢包概述",
+    "total": "钱包总余额",
+    "metrics": "关键指标",
+    "waiting": "等待中",
+    "paid": "已支付",
+    "expired": "已过期",
+    "webshop": "线上商店 概览",
+    "transactions_per_day": "每日交易",
+    "revenue_per_day": "每日收入",
+    "transactions_per_coin": "每种数字货币交易",
+    "transactions": "交易",
+    "report_incoming": "流入报告",
+    "report_outgoing": "流出报告",
+    "chart_market_title": "购物车",
+    "actions": "钱包动作",
+    "send": "發送加密",
+    "send_description": "你将把数字货币发送给他人,你需要知道接收者的地址和要发出数字货币的数量.",
+    "receive": "存款加密",
+    "receive_description": "接收数字货币到你的账户,你需要把你的接收地址告诉发送者",
+    "ltr": "加密安全地址",
+    "ltr_description": "LTR地址保持开放一年,您可以在该地址接收多个金额,一旦您合并您的总接收金额将可用于其他操作.",
+    "swap": "兑换",
+    "swap_description": "从一种数字货币到另一种数字货币的兑换。请注意,不是所有的数字货币都启用了兑换",
+    "vtoken": "VTOKEN支票",
+    "vtoken_description": "创建vtoken作为价值的代表。很容易发送和接收数字货币。",
+    "buy": "购买",
+    "buy_description": "通过银行转账或iDEAL支付来轻松购买加密货币",
+    "payout": "支付",
+    "payout_description": "支付给像欧元这样的法定货币",
+    "trade": "Trade",
+    "trade_description": "Trade with your crypto balance on our internal exchange called reflextrader.com",
+    "help": "面板指令",
+    "update_cart_status": "更新订单状态",
+    "btn_update_cart_status": "更新状态",
+    "warning_message": "請在您的帳戶[HERE]中填寫KYC / AML表單字段。在我們的合規團隊驗證您的信息之前，您無法接收和/或購買加密貨幣。感謝您的理解。"
+  },
+  "send": {
+    "title": "發送加密",
+    "amount": "量",
+    "coin_address": "硬币地址",
+    "scan": "扫描",
+    "upload": "上传",
+    "button": "發送加密",
+    "address_book": "通讯录",
+    "modals": {
+      "pin": {
+        "desc": "輸入PIN [PIN]以確認TZERO即期付款。 <br/> [AMOUNT]將被發送！"
+      }
+    }
+  },
+  "receive": {
+    "title": "存款加密",
+    "button": "存款加密",
+    "input_currency": "输入货币",
+    "amount": "量",
+    "output_currency": "输出货币",
+    "reference": "参考",
+    "email": "通过邮件发送发票",
+    "schedule": "计划为发票",
+    "schedule_dropdown": "选择计划"
+  },
+  "buy": {
+    "title": "买",
+    "button": "买",
+    "input_currency": "输入货币",
+    "amount": "数量"
+  },
+  "ltr": {
+    "title": "LTR ",
+    "load_long_term_address": "加载长期地址",
+    "create": "创造",
+    "consolidate": "巩固"
+  },
+  "swap": {
+    "title": "交换",
+    "swap_to": "交换",
+    "button": "交换",
+    "amount": "数量"
+  },
+  "vtoken": {
+    "title": "vToken",
+    "button_create": "创建vToken",
+    "button_claim": "声称vToken",
+    "amount": "量",
+    "token": "令牌"
+  },
+  "payout": {
+    "title": "支付",
+    "amount": "输入",
+    "button": "支付",
+    "address_book": "通讯录",
+    "remove": "删除",
+    "message": "默认:基于账户支付"
+  },
+  "home": {
+    "alert": "系统消息",
+    "slogan": "现代货币支付",
+    "sub_slogan": "密码货币银行,交易,网店整合和销售点",
+    "signup": "现在报名",
+    "auth_message": "你好 [USERNAME],点击这里到",
+    "your_dashboard": "仪表板",
+    "transaction": {
+      "slogan": "创建一个免费账户",
+      "email": "电子邮件",
+      "password": "密码",
+      "input_currency": "输入货币",
+      "amount": "量",
+      "output_currency": "输出货币",
+      "try_it_for_free": "免费尝试"
+    },
+    "plugins": {
+      "slogan": "你的网上商店加密支付插件",
+      "learn_more": "了解更多",
+      "sliders": {
+        "magento": {
+          "description": "在Github.com/Cointopay获取Magento插件",
+          "image": "https://s3-eu-west-1.amazonaws.com/cointopay/pics/Magento.png",
+          "link": "https://github.com/Cointopay?q=magento"
+        },
+        "prestashop": {
+          "description": "在Github.com/Cointopay获取Prestashop插件",
+          "image": "https://s3-eu-west-1.amazonaws.com/cointopay/pics/prestashop.png",
+          "link": "https://github.com/Cointopay?q=presta"
+        },
+        "ecwid": {
+          "description": "从ECWID应用程序安装ECWID插件",
+          "image": "https://s3-eu-west-1.amazonaws.com/cointopay/pics/ecwid.png",
+          "link": "https://www.ecwid.com/apps/"
+        },
+        "woocommerce": {
+          "description": "在Github.com/Cointopay获取Woocommerce插件",
+          "image": "https://s3-eu-west-1.amazonaws.com/cointopay/pics/woocommerce.png",
+          "link": "https://github.com/Cointopay?q=wordpress"
+        },
+        "opencart": {
+          "description": "在Github.com/Cointopay获取Opencart插件",
+          "image": "https://s3-eu-west-1.amazonaws.com/cointopay/pics/opencart.png",
+          "link": "https://github.com/Cointopay?q=opencart"
+        },
+        "whmcs": {
+          "description": "在Github.com/Cointopay获取WHMCS插件",
+          "image": "https://s3-eu-west-1.amazonaws.com/cointopay/pics/whmcs.jpg",
+          "link": "https://github.com/Cointopay?q=whmcs"
+        },
+        "shopify": {
+          "description": "获得Shopify间接集成youtube视频",
+          "image": "https://s3-eu-west-1.amazonaws.com/cointopay/pics/shopify.png",
+          "link": "https://www.youtube.com/watch?v=eM_dYQKCqlI"
+        },
+        "gambio": {
+          "description": "在Github.com/Cointopay上获取gambio插件",
+          "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTsOnMS-KmfgGeRVZJNRkMwkAAiT949z4V87Q&usqp=CAU",
+          "link": "https://github.com/Cointopay/Gambio"
+        },
+        "box_billing": {
+          "description": "在Github.com/Cointopay获取boxbilling插件",
+          "image": "https://s3-eu-west-1.amazonaws.com/cointopay/pics/boxbilling.jpg",
+          "link": "https://github.com/Cointopay?q=box"
+        },
+        "tomatocart": {
+          "description": "在Github.com/Cointopay获取Tomatocart插件",
+          "image": "https://s3-eu-west-1.amazonaws.com/cointopay/pics/tomatocart.png",
+          "link": "https://github.com/Cointopay?q=tomato"
+        },
+        "odoo": {
+          "description": "在Github.com/Cointopay获取Odoo插件",
+          "image": "https://s3-eu-west-1.amazonaws.com/cointopay/pics/odoo.png",
+          "link": "https://github.com/Cointopay?q=odoo"
+        },
+        "wordpressecommerce": {
+          "description": "在Github.com/Cointopay获取Wordpress ecommerce插件",
+          "image": "https://s3-eu-west-1.amazonaws.com/cointopay/pics/wordpressecommerce.jpg",
+          "link": "https://github.com/Cointopay?q=wordpress"
+        },
+        "blesta": {
+          "description": "在Github.com/Cointopay获取插件",
+          "image": "https://s3-eu-west-1.amazonaws.com/cointopay/pics/blesta.png",
+          "link": "https://github.com/Cointopay?q=blesta"
+        },
+        "easydigitaldownloads": {
+          "description": "在Github.com/Cointopay获取WP Easy Digital Downloads插件",
+          "image": "https://s3-eu-west-1.amazonaws.com/cointopay/pics/easydigitaldownloads.png",
+          "link": "https://github.com/Cointopay?q=easy"
+        },
+        "ubercart": {
+          "description": "在Github.com/Cointopay获取Ubercart插件",
+          "image": "https://s3-eu-west-1.amazonaws.com/cointopay/pics/ubercart.png",
+          "link": "https://github.com/Cointopay?q=uber"
+        },
+        "cscart": {
+          "description": "在Github.com/Cointopay获取CS-Cart插件",
+          "image": "https://s3-eu-west-1.amazonaws.com/cointopay/pics/cscart.png",
+          "link": "https://github.com/Cointopay?q=cs-cart"
+        },
+        "joomlavirtuemart": {
+          "description": "在Github.com/Cointopay获取Joomla plugin at Github.com/Cointopay",
+          "image": "https://s3-eu-west-1.amazonaws.com/cointopay/pics/joomla.png",
+          "link": "https://github.com/Cointopay?q=joomla"
+        },
+        "zencart": {
+          "description": "在Github.com/Cointopay获取Zencart插件",
+          "image": "https://s3-eu-west-1.amazonaws.com/cointopay/pics/zencart.png",
+          "link": "https://github.com/Cointopay?q=zencart"
+        },
+        "oscommerce": {
+          "description": "在Github.com/Cointopay获取OSCommerce插件",
+          "image": "https://s3-eu-west-1.amazonaws.com/cointopay/pics/oscommerce.png",
+          "link": "https://github.com/Cointopay?q=oscommerce"
+        },
+        "drupalcommerce": {
+          "description": "在Github.com/Cointopay获取Drupal Commerce插件",
+          "image": "https://s3-eu-west-1.amazonaws.com/cointopay/pics/drupalcommerce.png",
+          "link": "https://github.com/Cointopay?q=drupal"
+        },
+        "xcart": {
+          "description": "在Github.com/Cointopay获取X-Cart插件",
+          "image": "https://s3-eu-west-1.amazonaws.com/cointopay/pics/xcart.png",
+          "link": "https://github.com/Cointopay?q=x-cart"
+        },
+        "membershippro": {
+          "description": "在Github.com/Cointopay获取Membership pro插件",
+          "image": "https://s3-eu-west-1.amazonaws.com/cointopay/pics/membershippro.jpg",
+          "link": "https://github.com/Cointopay?q=membership"
+        },
+        "arastta": {
+          "description": "在Github.com/Cointopay获取Arastta plugin插件",
+          "image": "https://s3-eu-west-1.amazonaws.com/cointopay/pics/arastta.png",
+          "link": "https://github.com/Cointopay?q=aras"
+        }
+      }
+    },
+    "services": {
+      "slogan": "您的优势与Cointopay",
+      "text": {
+        "1": "全功能web钱包",
+        "2": "可能的最佳汇率",
+        "3": "多个密码币交易对",
+        "4": "实时资产负债表",
+        "5": "<a href=\"https://cointopay.freshdesk.com/support/solutions\">API Documentation / Support</a>",
+        "6": "静止数据加密",
+        "7": "等等……"
+      }
+    },
+    "apps": {
+      "wallet": {
+        "title": "获取钱包应用",
+        "description": "管理您的Cointopay钱包,并通过您的智能手机免费加入交易市场。"
+      },
+      "pos": {
+        "title": "获取POS app",
+        "description": "使用Cointopay POS应用,您可以进行库存管理和直接与客户销售。"
+      },
+      "tipping": {
+        "title": "获取小费应用",
+        "description": "Tippr。如今,全球小费标准可以在你的智能手机上使用。"
+      }
+    }
+  },
+  "news": {
+    "title": "最新Cointopay & 数字货币新闻",
+    "add": "添加新闻",
+    "button": "保存"
+  },
+  "account": {
+    "overview": "账户概述",
+    "button_update": "更新",
+    "session_expired": "會話已過期",
+    "expiry_msg": "出於隱私原因，如果沒有有效的會話，您將無法訪問此部分，是否要再次登錄？",
+    "btn_manage_pos": "POS经理",
+    "email_notifications": "邮件通知",
+    "menu": {
+      "details": "账户信息",
+      "payout": "支付细节",
+      "kyc": "什么/ AML",
+      "shopping": "购物车",
+      "wallet": "钱包货币",
+      "payments": "付款url",
+      "billing": "账单",
+      "pos": "Point of Sale(POS)",
+      "referrals": "推荐"
+    },
+    "details": {
+      "verification": "账户验证",
+      "verified": "已核实—审计周期的一部分",
+      "un_verified": "未验证账户-请填写您的详细信息",
+      "id": "商家/帐户ID",
+      "api": "账户api密钥",
+      "security_code": "安全码",
+      "organization": "组织",
+      "username": "昵称",
+      "password": "密码",
+      "email": "电子邮件",
+      "twofa": {
+        "auth": "谷歌auth (2FA)",
+        "reset": "重置 2FA Code",
+        "test": "点击测试2FA代码",
+        "warning": "如果数字匹配,只能打开2FA",
+        "on_off": "2fa开/关"
+      },
+      "locale": "语言环境"
+    },
+    "payout": {
+      "payout": "支付",
+      "option": "贝宝电子邮件",
+      "bank": "支付银行",
+      "bank_name": "银行账户名称",
+      "iban": "伊班人/银行账户",
+      "bank_bic": "BIC /快速/路由代码",
+      "address_book": "银行地址簿",
+      "crypto_address_book": "加密通訊錄",
+      "payout_message": "選擇付款作為選項以自動執行銀行/法定和加密類型的付款。選擇保留以停止自動付款。在任何時候，您都可以通過按錢包部分內的“付款”按鈕選擇臨時銀行/法定付款。錢包部分中的SEND按鈕用於通過區塊鏈發送加密貨幣（即席）。",
+      "bank_verification_message": "為了向您的銀行付款，我們將檢查（國際）銀行帳戶是否屬於您。通常通過名稱比較來完成。如果我們有疑問，我們將要求您向我們的銀行發送少量金額和消息，以證明這是您的銀行帳戶。"
+    },
+    "kyc": {
+      "account_type": "帳戶類型",
+      "business_information": "商業信息",
+      "beneficiary_information": "收款人資料",
+      "business_account": "商业或个人账户",
+      "business_name": "企业名称",
+      "business_address": "业务处理",
+      "business_postal_code": "商业邮政编码",
+      "business_city": "商业城市",
+      "business_state": "业务状态",
+      "business_country": "业务",
+      "first_name": "收款人名字",
+      "last_name": "收款人姓氏",
+      "full_name": "受益人个人全名",
+      "birth_date": "受益人出生日期",
+      "pep": "你是一个政治敏感的人吗?",
+      "bank_address": "受益人地址",
+      "bank_postal_code": "邮编受益人",
+      "bank_city": "受益人",
+      "bank_state": "受益人",
+      "bank_country": "受益人",
+      "beneficiary_identity_information": "收款人身份信息",
+      "profile_image_help": "您持有護照/照片ID（含）的自拍照。日期和暱稱/用戶名",
+      "identity_type": "身份類型",
+      "identity_number": "身份證號碼",
+      "identity_country": "身份簽發國家",
+      "remove_account": "删除账号",
+      "income_source": "收入來源",
+      "income_detail": "詳情"
+    },
+    "shopping_cart": {
+      "shopify_api": "API键",
+      "shopify_password": "Shopify密码",
+      "shopify_url": "Shopify URL",
+      "shopify_script": "Shopify脚本",
+      "ecwid": "ecwid商店ID"
+    },
+    "wallet": {
+      "active_title": "有效货币",
+      "active_help": "选择您要积极使用的货币,禁用它们并不意味着您会失去它们的余额,只是在重新启用之前,您不会在其他视图中看到它们。请注意,最终客户是无法签出禁用的货币！",
+      "default_title": "默认输入币种",
+      "default_help": "这是显示功能的首选输入货币。例如美元或欧元。",
+      "preferred_title": "首选货币",
+      "preferred_help": "您最喜欢的货币,如果您必须选择一种,就这样！",
+      "excluded_currencies_title": "每日自动付款中不包含货币",
+      "excluded_currencies_help": "每日自动付款中不包含货币",
+      "button": "更改",
+      "choose": "选择货币",
+      "auto_swap": "是否自动换成首选货币？",
+      "flexibility_percentage": "灵活性百分比",
+      "help": "将金额低于此灵活性百分比的支付金额设为欠付金额"
+    },
+    "payment_urls": {
+      "confirm": "付款确认URL",
+      "fail": "付款失败网址",
+      "description": "我们添加以确认URL: ?CustomerReferenceNr=1&TransactionID=1&status=failed|paid&ConfirmCode=GeneratedUniqueCode"
+    },
+    "billing": {
+      "description": "向每笔进账交易都收取一定的费用。终身会员功能已过时。",
+      "overview_confirmed_transactions": "概述已确认的交易"
+    },
+    "referrals": {
+      "description": "您的推荐人已自动注册。请使用您的个人推荐人链接 https://cointopay.com/?r=[MerchantID]-赚取更多！"
+    }
+  },
+  "pos": {
+    "title": "POS",
+    "pos_manager": "POS管理器",
+    "social_detail": "POS Social details",
+    "shipping_warning_msg": "未设置运送选项,并且选择了所有国家/地区进行运送",
+    "menu": {
+      "products": "产品",
+      "tickets": "门票",
+      "receipts": "收据",
+      "employees": "雇员",
+      "coupons": "优惠券",
+      "shipping": "运费",
+      "office": "Back Office"
+    },
+    "e_commerce": "电子商务",
+    "btn_enable": "启用电子商务",
+    "btn_disable": "禁用电子商务",
+    "delete_catalog": "删除目录",
+    "btn_delete_all_products": "删除所有产品",
+    "products": {
+      "title": "创建/更新产品",
+      "select_category": "选择类别",
+      "name": "产品名称",
+      "description": "描述",
+      "price": "Price",
+      "sku": "SKU / EAN /条形码/ QR",
+      "quantity": "库存水平",
+      "btn_add": "添加产品",
+      "btn_save": "保存",
+      "tabs": {
+        "categories": "类别",
+        "products": "产品",
+        "favourites": "收藏夹"
+      },
+      "favourites": {
+        "message": "没有最喜欢的产品！"
+      },
+      "categories": {
+        "title": "添加/更新类别",
+        "category_name": "类别名称",
+        "select_color": "选择颜色",
+        "btn_save": "保存",
+        "btn_add": "添加类别"
+      },
+      "charge": {
+        "no_ticket": "没有活动的票",
+        "total_price": "总价",
+        "pay_with": "付款方式:",
+        "btn_charge": "收费",
+        "btn_delivery_charge": "收费+送货"
+      }
+    },
+    "cart": {
+      "available": "available",
+      "add_to_cart": "添加到购物车",
+      "update_cart": "添加更多",
+      "continue_shopping": "继续购物",
+      "checkout": "结账",
+      "clear_cart": "清除购物车",
+      "empty_cart": "您的购物车为空"
+    },
+    "employees": {
+      "title": "POS",
+      "username": "用户名",
+      "password": "用户名 / PIN",
+      "pin": "PIN",
+      "btn_login": "登录",
+      "btn_add": "添加员工",
+      "btn_save": "保存"
+    },
+    "office": {
+      "product_catalog": "产品目录",
+      "import": "导入",
+      "export": "导出",
+      "import_from_shopify": "..或直接从shopify导入",
+      "shopify_link": "输入Shopify链接",
+      "help": "只有经过验证的商家才能在商店部分公开产品！"
+    },
+    "tickets": {
+      "lbl_quantity": "输入数量",
+      "stock_left": "剩余库存:",
+      "product_price": "产品价格:",
+      "total_price": "总价:",
+      "btn_add": "添加",
+      "add": "添加票证",
+      "name": "票名",
+      "note": "Note",
+      "btn_save": "保存",
+      "add_product": "添加产品",
+      "back": "返回"
+    },
+    "invoice": {
+      "message": "扫描QR码或显示给发件人",
+      "address": "地址",
+      "amount": "数量",
+      "success": "谢谢您,付款成功。<br/>交易ID:＃",
+      "failure": "付款失败",
+      "merchant": "商人",
+      "invoice_number": "发票编号"
+    },
+    "receipts": {
+      "title": "收据",
+      "email": "输入电子邮件地址",
+      "btn_send_receipt": "电子邮件收据"
+    },
+    "success": "付款成功！",
+    "coupons": {
+      "headings": {
+        "coupon_code": "优惠券代码",
+        "discount": "优惠",
+        "actions": "动作"
+      },
+      "no_data": "没有可用的优惠券",
+      "btn_add": "添加优惠券",
+      "list_title": "电子商务优惠券",
+      "title": "优惠券",
+      "coupon_code": "优惠券代码",
+      "discount": "优惠",
+      "btn_save": "保存"
+    },
+    "shipping": {
+      "title": "电子商务交付选项",
+      "btn_add": "添加运输选项",
+      "country": "国家",
+      "shipping_method": "运输方式",
+      "shipping_cost": "运费",
+      "btn_save": "保存",
+      "no_data": "无法送货",
+      "headings": {
+        "country": "国家",
+        "shipping_method": "运输方式",
+        "shipping_cost": "运费",
+        "actions": "动作"
+      }
+    }
+  },
+  "shop": {
+    "locale": "Locale",
+    "checkout": {
+      "title": "结帐",
+      "billing": "帐单地址",
+      "billing_first_name": "名字",
+      "billing_last_name": "姓氏",
+      "organization": "组织",
+      "billing_phone": "电话",
+      "billing_email": "电子邮件地址",
+      "billing_skype": "Skype",
+      "billing_address": "地址",
+      "billing_postal_code": "邮递区号",
+      "billing_city": "城市/城镇",
+      "billing_state": "州/省",
+      "billing_country": "国家",
+      "shipping": "送货地址",
+      "shipping_first_name": "名字",
+      "shipping_last_name": "姓氏",
+      "shipping_phone": "电话",
+      "shipping_email": "电子邮件地址",
+      "shipping_skype": "Skype",
+      "shipping_address": "地址",
+      "shipping_postal_code": "邮递区号",
+      "shipping_city": "城市/城镇",
+      "shipping_state": "州/省",
+      "shipping_country": "国家",
+      "select_currency": "选择货币",
+      "process": "处理购物车付款",
+      "different_from_billing": "与帐单地址不同",
+      "shipping_cost": "运费",
+      "cart": {
+        "title": "购物车摘要",
+        "sub_total": "总计",
+        "shipping_cost": "交货成本",
+        "discount": "优惠",
+        "total": "总共",
+        "btn_apply": "应用",
+        "payment": "付款"
+      }
+    }
+  },
+  "about": {
+    "title": "关于Cointopay",
+    "description": "Cointopay是一家位于荷兰哈勒姆的新兴公司,于2014年正式成立。该团队由开发人员和管理员组成。我们的主要驱动力是基于互联网提供创新的互联网支付服务新的数字货币,在媒体上也称为比特币。我们是一家合法企业,在政治上并未贬低美元/欧元。我们确实认为,数字货币支付方式的替代方案将推动市场竞争,最终有利公众。Cointopay是面向企业和慈善组织的数字货币商业支付服务提供商。我们看到以比特币等替代货币进行金融交易的未来,将收取非常低的费用,安全,即时且非常容易,我们希望成为数字货币革命的一部分。"
+  },
+  "login": {
+    "title": "登录",
+    "username": "用户名",
+    "password": "密码",
+    "twofa": "Google 2FA可选",
+    "button": "登录",
+    "forgot": "忘记密码了？",
+    "recover": "恢复密码"
+  },
+  "signup": {
+    "title": "注册",
+    "username": "用户名",
+    "password": "密码",
+    "twofa": "Google 2FA可选",
+    "email": "电子邮件",
+    "wallets": "选择有效的钱包货币",
+    "wallet_button": "选择货币",
+    "locale": "语言",
+    "button": "注册"
+  },
+  "invoice": {
+    "title": "生成的发票",
+    "invoice_url": "发票网址",
+    "warning": "请不要在此付款时间窗口之外向此发票地址付款！",
+    "address": "地址",
+    "merchant": "商人",
+    "currency": "货币",
+    "amount": "数量",
+    "fee": "包含费用",
+    "transaction_id": "交易ID",
+    "expiry": "到期",
+    "reference": "客户参考",
+    "created_on": "创建于",
+    "crypto": "数字货币",
+    "address_only": "加密地址",
+    "full_crypto_link": "密码链接",
+    "tzero": "立刻",
+    "fiat": "FIAT/Card",
+    "invoice": "发票",
+    "coin": "硬币",
+    "status": "状态",
+    "created": "已创造",
+    "input_amount": "输入金额",
+    "input_currency": "输入货币",
+    "confirmed": "已确认",
+    "expiry_on": "到期日",
+    "datetime": "Datetime",
+    "confirmed_message": "付款已确认！",
+    "failed_message": "付款失败！",
+    "re_open": "重新打开",
+    "transaction_scheduled_for_revalidation": "已安排要重新验证的交易",
+    "missing_amount": "生成剩余付款的发票",
+    "generate_invoice": "生成发票",
+    "block_explorer": "探索块",
+    "refund": "退款",
+    "help_title": "帮助",
+    "pay_with_different_currency": "使用其他货币付款",
+    "add": "Add",
+    "forward_invoice": "转发发票",
+    "cart_status": "订单状态",
+    "delivery_address": "送货地址",
+    "order_information": "订单信息",
+    "view_address": "查看地址",
+    "view_order": "查看订单",
+    "shipping_cost": "运费",
+    "discount": "优惠",
+    "fiat_options": "法定选项"
+  },
+  "misc": {
+    "services": "服务",
+    "social": "社交",
+    "company": "公司"
+  },
+  "address_book": {
+    "title": "通讯录",
+    "address": "地址",
+    "tag": "Memo/Message/Tag",
+    "description": "描述",
+    "currency": "货币",
+    "new": "新地址",
+    "save": "保存",
+    "edit": "修改",
+    "delete": "删除",
+    "select": "选择",
+    "select_default": "选择为默认",
+    "remove_default": "默认删除",
+    "actions": "动作"
+  },
+  "newsletter": {
+    "title": "订阅/取消订阅",
+    "email": "电子邮件地址",
+    "subscribe": "订阅",
+    "un_subscribe": "取消订阅"
+  },
+  "ratings": {
+    "author": "全名",
+    "email": "电子邮件地址",
+    "title": "标题",
+    "comment": "评论",
+    "btn_rate": "费率"
+  },
+  "errors": {
+    "required": "必需的",
+    "invalid_url": "无效的网址",
+    "invalid_email": "无效的邮件地址",
+    "no_match": "密码不匹配",
+    "invalid_date": "日期、格式无效",
+    "invalid_decimal": "金额值无效，格式",
+    "min": "允许的最小值 ",
+    "invalid_password_criteria": "请检查密码标准",
+    "invalid_phone": "电话号码、格式无效",
+    "min_len": "最小长度 ",
+    "max_len": "最长长度 ",
+    "numeric": "请提供一个有效的数值",
+    "invalid_format": "无效的格式"
+  }
+}
