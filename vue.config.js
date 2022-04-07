@@ -5,6 +5,8 @@ module.exports = {
   devServer: {
     https: true,
     port  : 443,
+    disableHostCheck: true,
+    public: 'localhost'
   },
   pluginOptions: {
     compression: {

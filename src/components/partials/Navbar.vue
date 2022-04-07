@@ -26,7 +26,7 @@
       </div>
       <div id="mobile-menu" :class="[!isMenu ? 'hidden' : '']"
            class="mt-3 xl:mt-0 w-full xl:w-auto block xl:flex items-center flex-1 flex-col xl:flex-row justify-between">
-        <converter></converter>
+        <converter />
         <div class="w-full xl:w-auto block xl:flex items-center">
           <ul
             class="flex items-center flex-col mt-4 xl:flex-row space-y-2 xl:space-y-0 xl:space-x-3 xl:mt-0 xl:text-sm xl:font-medium">
@@ -53,13 +53,11 @@
               </router-link>
             </li>
             <template v-if="!isLoggedIn">
-              <!-- Login -->
               <li class="w-full">
                 <router-link class="nav-item border-0" tag="a" :to="{name: 'login'}">
                   <span @click="isMenu = false">{{ translate('login.title') }}</span>
                 </router-link>
               </li>
-              <!-- Sign Up -->
               <li class="w-full">
                 <router-link class="nav-item border-0 whitespace-nowrap" tag="a" :to="{name: 'signup'}">
                   <span @click="isMenu = false">{{ translate('signup.title') }}</span>

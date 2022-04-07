@@ -1,8 +1,28 @@
 <template>
+ <!-- <span class="text-base tracking-tighter text-yellow-500">
+    <x-svg.bell class="h-5 -mr-1 align-text-top animate-swing origin-top"/>
+    <sup>2</sup>
+  </span> -->
   <div v-click-away="() => { dropdown = false }" class="relative">
-    <button class="p-2 bg-gray-100 dark:bg-gray-700 hover:bg-gray-200 rounded dark:text-white dark:hover:bg-gray-500"
-            @click="dropdown = !dropdown">
-      <icon :classes="`w-5 h-5 ${nList.length > 0 ? 'text-red-500 animate-pulse': ''}`" name="bell"></icon>
+    <button class="p-2 hover:bg-gray-200 rounded dark:text-white dark:hover:bg-gray-500"
+            @click="dropdown = !dropdown" style="position: relate;">
+      <icon :classes="`w-5 h-5 ${nList.length > 0 ? 'text-red-500 animate-pulse': ''}`" name="bell">
+      </icon>
+        <span class="badge badge-light" style="
+        position: absolute;
+        color: #fff;
+        background-color: #f26c22;
+        top: 3px;
+        right: 3px;
+        padding: 0.25em 0.4em;
+        font-size: 75%;
+        font-weight: 700;
+        line-height: 1;
+        text-align: center;
+        white-space: nowrap;
+        vertical-align: baseline;
+        border-radius: 8px;
+      ">{{nList.length}}</span>
     </button>
     <div v-if="dropdown" aria-orientation="vertical"
          class="absolute top-8 right-0 mt-2 w-64 rounded-md shadow-lg py-2 bg-white dark:bg-gray-800 border-2 border-gray-200 dark:border-gray-700 focus:outline-none"

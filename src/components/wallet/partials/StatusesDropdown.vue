@@ -13,7 +13,7 @@
     </div>
     <div v-if="dropdown" aria-labelledby="user-menu-button" aria-orientation="vertical"
          class="origin-top-right absolute max-h-64 scrollbar scrollbar-thin scrollbar-thumb-gray-400 scrollbar-track-gray-200 dark:scrollbar-track-gray-900 dark:scrollbar-thumb-gray-600 right-0 mt-2 w-full rounded-md shadow-xl py-1 border border-gray-50 dark:border-gray-900 bg-white dark:bg-gray-800 ring-1 ring-black ring-opacity-5 focus:outline-none"
-         role="menu" tabindex="-1">
+         role="menu" tabindex="-1" style="overflow-y: scroll;">
       <a
         class="flex items-center block px-4 py-2 text-sm text-gray-700 cursor-pointer hover:bg-gray-200 dark:text-gray-400 dark:hover:bg-gray-700"
         role="menuitem" tabindex="-1">

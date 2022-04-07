@@ -41,12 +41,12 @@
             alt=''
             class='w-5 h-5'
           />
-          <!-- <span class='mx-2'>{{ sourceAltCoin.LongName }}</span> -->
+          <span class='mx-2'>{{ sourceAltCoin.LongName }}</span>
           <span>
             <icon name='chevron-down' classes='w-4 h-4'></icon>
           </span>
         </j-button>
-        <ul
+        <ul style="overflow-y: scroll;"
           v-show='sourceDropdown'
           class='
             w-72
@@ -95,9 +95,9 @@
               @click='setSourceID(record.ID)'
             >
               <img :src='generateIconUrl(record.Name)' alt='' class='w-5 h-5' />
-              <!-- <span class='ml-8'>{{
+              <span class='ml-8'>{{
                 `${record.LongName} ${record.Name}`
-              }}</span> -->
+              }}</span>
             </a>
           </li>
         </ul>
@@ -142,12 +142,12 @@
             alt=''
             class='w-5 h-5'
           />
-          <!-- <span class='mx-2'>{{ targetAltCoin.LongName }}</span> -->
+          <span class='mx-2'>{{ targetAltCoin.LongName }}</span>
           <span>
             <icon name='chevron-down' classes='w-4 h-4'></icon>
           </span>
         </j-button>
-        <ul
+        <ul style="overflow-y: scroll;"
           v-show='targetDropdown'
           class='
             w-72
@@ -196,9 +196,9 @@
               @click='setTargetID(record.ID)'
             >
               <img :src='generateIconUrl(record.Name)' alt='' class='w-5 h-5' />
-              <!-- <span class='ml-8'>{{
+              <span class='ml-8'>{{
                 `${record.LongName} ${record.Name}`
-              }}</span> -->
+              }}</span>
             </a>
           </li>
         </ul>
